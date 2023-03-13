@@ -1,0 +1,12 @@
+{
+  "extends": "eslint-config-egg/typescript",
+  "rules": {
+    "array-bracket-spacing": 0,
+    "no-case-declarations": 0,
+    "jsdoc/require-returns-check": 0
+  },
+  "parserOptions": {
+    "project": "./tsconfig.eslint.json"
+  },
+  "ignorePatterns": ["dist", "coverage", "node_modules", "**/*.d.ts", "**/*.test.js", "config/webpack.config.js", "test"]
+}

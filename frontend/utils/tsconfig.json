@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "strict": false,
+    "noImplicitThis": true,
+    "moduleResolution": "node",
+    "target": "es6",
+    "module": "es6",
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "baseUrl": "./",
+    "outDir": "dist",
+    "plugins": [],
+    "typeRoots": ["./types"],
+    "types": ["mocha", "node"]
+  },
+  "include": ["./src", "./types"],
+  "exclude": ["config/webpack.config.js"]
+}
