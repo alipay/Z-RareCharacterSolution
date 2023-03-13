@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration name="log-rare-character-config" status="error" monitorInterval="10">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="[%d{yyyy-MM-dd;HH:mm:ss.SSS Z}] [%-5p] [%t] [%c] %m%n"></PatternLayout>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Logger name="com.demo.log" level="INFO" additivity="false">
+            <AppenderRef ref="Console"></AppenderRef>
+        </Logger>
+    </Loggers>
+</Configuration>
