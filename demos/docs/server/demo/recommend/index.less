@@ -1,0 +1,136 @@
+.pc-container.recommend {
+  padding: 15px;
+
+  .wrap {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .card-header {
+    margin-top: 20px;
+  }
+
+  .form {
+    margin-top: 10px;
+
+    &__item {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-items: center;
+      align-items: center;
+
+      &-label {
+        min-width: 80px;
+        text-align: left;
+      }
+
+      &-right {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-items: flex-start;
+        align-items: center;
+      }
+
+      &-input {
+        width: 400px;
+      }
+
+      &-icon svg {
+        width: 32px;
+        height: 32px;
+        margin-left: 10px;
+        color: red;
+      }
+    }
+
+    &__bottom {
+      margin-top: 30px;
+
+      &-btn {
+        padding: 0 24px;
+        margin-left: 80px;
+      }
+    }
+  }
+
+  .result {
+    height: 40px;
+  }
+
+  .result-tips {
+    width: 400px;
+    margin-top: 30px;
+    margin-left: 80px;
+  }
+
+  .recommend {
+    margin-top: 20px;
+    .title {
+      position: relative;
+      font-weight: bold;
+      font-size: 16px;
+
+      &::after {
+        content: ' ';
+        display: block;
+        height: 1px;
+        width: calc(100% - 80px);
+        background-color: #eee;
+        position: absolute;
+        right: 0;
+        bottom: 12px;
+      }
+    }
+
+    &__item-wrap {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      justify-content: flex-start;
+      margin-left: -20px;
+    }
+
+    .ant-card {
+      margin-left: 20px;
+    }
+
+    &__item {
+      &-text {
+        font-size: 20px;
+        font-weight: bolder;
+      }
+
+      &-tag {
+        white-space: pre-wrap;
+        word-break: break-all;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .logs {
+    margin-top: 20px;
+    .title {
+      position: relative;
+      font-weight: bold;
+      font-size: 16px;
+
+      &::after {
+        content: ' ';
+        display: block;
+        height: 1px;
+        width: calc(100% - 80px);
+        background-color: #eee;
+        position: absolute;
+        right: 0;
+        bottom: 12px;
+      }
+    }
+
+    .log {
+      color: #777;
+      font-size: 14px;
+      margin: 2px 0;
+    }
+  }
+}
