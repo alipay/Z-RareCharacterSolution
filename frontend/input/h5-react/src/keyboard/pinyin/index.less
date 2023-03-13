@@ -1,0 +1,58 @@
+.rare-words-input__pinyin {
+  background: var(--background);
+  padding-top: calc(16 * var(--px, 1px));
+  padding-bottom: calc(16 * var(--px, 1px));
+
+  &-left {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1;
+    box-sizing: border-box;
+  }
+
+  &-row {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    background: var(--background);
+    margin-bottom: calc(16 * var(--px, 1px));
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &-operation {
+    width: 25%;
+  }
+
+  &-key {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(88 * var(--px, 1px));
+    width: calc(61 * var(--px, 1px));
+    background: #fff;
+    font-size: calc(36 * var(--px, 1px));
+    color: var(--text-color);
+    box-sizing: border-box;
+    border-radius: calc(8 * var(--px, 1px));
+    margin-right: calc(12 * var(--px, 1px));
+    user-select: none;
+
+    &:active {
+      background: var(--active-color);
+      color: #fff;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.delete-btn {
+      width: calc(134 * var(--px, 1px));
+      height: calc(88 * var(--px, 1px));
+    }
+  }
+}

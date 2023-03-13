@@ -1,0 +1,154 @@
+.rare-words-input {
+  &__error {
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    &-img {
+      width: 50px;
+    }
+
+    &-desc {
+      font-size: 13px;
+    }
+
+    &-btn {
+      padding: 3px 12px;
+      font-size: 15px;
+      margin-top: 7.5px;
+    }
+  }
+
+  &__input-value {
+    top: -32px;
+    height: 32px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border: 0.5px solid #eee;
+    letter-spacing: 1px;
+    font-size: 12px;
+  }
+
+  &__match-words {
+    padding: 10px 12px 10px 4px;
+
+    &-wrap {
+      min-height: calc(96 * var(--px, 1px));
+
+      &::before {
+        content: '';
+        top: -0.5px;
+        height: 0.5px;
+      }
+    }
+
+    &-words {
+      height: 28px;
+      margin-right: -16px;
+      padding-right: 21px;
+    }
+
+    &-words-all {
+      margin-top: -10px;
+      padding-left: 4px;
+      padding-right: 21px;
+
+      &::after {
+        left: -32px;
+        height: 0.5px;
+      }
+    }
+
+    &-word-inner {
+      font-size: 20.5px;
+      line-height: 28.5px;
+    }
+
+    &-right {
+      width: 24px;
+      height: 24px;
+      margin-top: 2px;
+    }
+
+    &-overflow {
+      &::before {
+        width: 6px;
+        left: -16px;
+      }
+    }
+
+    &-hidden {
+      top: -9999px;
+      left: -9999px;
+      width: 36.5px;
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+  }
+
+  &__tips {
+    padding-left: 4px;
+    font-size: 14px;
+  }
+
+  &__pinyin {
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    &-row {
+      margin-bottom: 8px;
+    }
+
+    &-key {
+      height: 44px;
+      width: 30.5px;
+      font-size: 18px;
+      border-radius: 4px;
+      margin-right: 6px;
+
+      &.delete-btn {
+        width: 67px;
+        height: 44px;
+      }
+    }
+  }
+
+  &__stroke {
+    &-key {
+      height: 48px;
+      font-size: 16px;
+      border: 0.5px solid #eee;
+
+      &.text-btn {
+        font-size: 14px;
+      }
+
+      &.confirm-btn {
+        margin-left: 0.5px;
+      }
+    }
+  }
+}
+
+.icon-delete {
+  font-size: 18px !important;
+}
+
+.icon-arrow-down {
+  font-size: 28px !important;
+}
+
+.icon-arrow-right {
+  font-size: 28px !important;
+}
+
+.icon-arrow-up {
+  font-size: 28px !important;
+}
+
+.icon-shouqijianpan {
+  font-size: 28px !important;
+}
+
+.icon-keyboard-hide {
+  font-size: 24px !important;
+}
