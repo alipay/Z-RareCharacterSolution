@@ -1,0 +1,23 @@
+.rare-words-input__input-value {
+  position: absolute;
+  top: calc(-64 * var(--px, 1px));
+  left: 0;
+  display: inline-block;
+  height: calc(64 * var(--px, 1px));
+  line-height: calc(64 * var(--px, 1px));
+  border-top-left-radius: calc(8 * var(--px, 1px));
+  border-top-right-radius: calc(8 * var(--px, 1px));
+  background-color: var(--background);
+  padding-left: calc(20 * var(--px, 1px));
+  padding-right: calc(20 * var(--px, 1px));
+  border: calc(1 * var(--px, 1px)) solid #eee;
+  border-bottom: 0;
+  letter-spacing: calc(2 * var(--px, 1px));
+  box-sizing: border-box;
+  font-size: calc(24 * var(--px, 1px));
+  color: #333;
+
+  &.hide {
+    display: none;
+  }
+}

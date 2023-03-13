@@ -1,0 +1,29 @@
+@import url('./styles/variable.less');
+@import url('./styles/iconfont.less');
+@import url('./styles/global-mixin.less');
+// @import url('./styles/var-patch.less');
+
+.rare-words-input {
+  display: unset;
+
+  &__keybord {
+    position: relative;
+  }
+
+  &__header {
+    background-color: var(--background);
+  }
+
+  &__main {
+    background-color: var(--background);
+
+    .iphonex({
+      padding-bottom: constant(safe-area-inset-bottom, calc(34 * var(--px, 1px)));
+      padding-bottom: env(safe-area-inset-bottom, calc(34 * var(--px, 1px)));
+    });
+  }
+
+  &__footer {
+    display: unset;
+  }
+}
