@@ -1,0 +1,20 @@
+version: '3'
+services:
+  mysql:
+    build: 
+      context: ./.docker/database
+      dockerfile: Dockerfile
+    ports:
+      - "3306:3306"
+    container_name: rare-mysql
+    environment:
+      - LANG=zh_CN.UTF-8
+  web:
+    build: 
+      context: ./.docker/server
+      dockerfile: Dockerfile
+    container_name: rare-server
+    ports:
+     - "8088:8088"
+    depends_on:
+     - mysql

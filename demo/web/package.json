@@ -1,0 +1,41 @@
+{
+  "name": "rare-words-demo",
+  "version": "0.0.1",
+  "description": "生僻字开源demo",
+  "license": "MIT",
+  "scripts": {
+    "build": "dumi build",
+    "dev": "dumi dev",
+    "start": "npm run dev"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "*.{md,json}": [
+      "prettier --write --no-error-on-unmatched-pattern"
+    ]
+  },
+  "dependencies": {
+    "@ant-design/icons": "^5.0.1",
+    "ant-rare-words-input-react": "^0.0.1-beta.2",
+    "ant-rare-words-input-react-pc": "^0.0.1-beta.2",
+    "ant-rare-words-utils": "^0.0.1-beta.5",
+    "antd": "^5.3.0",
+    "axios": "^1.3.4",
+    "classnames": "^2.3.2",
+    "react-copy-to-clipboard": "^5.1.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "dumi": "^2.0.2",
+    "dumi-theme-mobile": "^2.0.4",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
