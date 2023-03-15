@@ -9,7 +9,7 @@ services:
     container_name: rare-mysql
     environment:
       - LANG=zh_CN.UTF-8
-  web:
+  server:
     build: 
       context: ./.docker/server
       dockerfile: Dockerfile
@@ -18,3 +18,12 @@ services:
      - "8088:8088"
     depends_on:
      - mysql
+  web:
+    build:
+      context: ./.docker/web
+      dockerfile: Dockerfile
+    container_name: rare-web
+    ports:
+      - "80:80"
+    depends_on:
+      - server
