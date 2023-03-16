@@ -1,6 +1,6 @@
 {
   "name": "ant-rare-words-input-react",
-  "version": "0.0.1-beta.3",
+  "version": "0.0.1",
   "description": "生僻字输入组件 React 版",
   "license": "MIT",
   "module": "dist/index.js",
@@ -44,7 +44,7 @@
   },
   "dependencies": {
     "@react-spring/web": "^9.6.1",
-    "ant-rare-words-utils": "^0.0.1-beta.4",
+    "ant-rare-words-utils": "^0.0.2",
     "classnames": "^2.3.2",
     "lodash": "^4.17.21",
     "postcss-plugin-px2rem": "^0.8.1"

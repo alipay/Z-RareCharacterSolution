@@ -6,7 +6,8 @@
   "scripts": {
     "build": "dumi build",
     "dev": "dumi dev",
-    "start": "npm run dev"
+    "start": "npm run dev",
+    "update-demo": "npm run build && rm -rf ../.docker/web/dist && mv ./dist ../.docker/web"
   },
   "commitlint": {
     "extends": [
@@ -20,9 +21,9 @@
   },
   "dependencies": {
     "@ant-design/icons": "^5.0.1",
-    "ant-rare-words-input-react": "^0.0.1-beta.2",
-    "ant-rare-words-input-react-pc": "^0.0.1-beta.2",
-    "ant-rare-words-utils": "^0.0.1-beta.5",
+    "ant-rare-words-input-react": "^0.0.1",
+    "ant-rare-words-input-react-pc": "^0.0.1",
+    "ant-rare-words-utils": "^0.0.2",
     "antd": "^5.3.0",
     "axios": "^1.3.4",
     "classnames": "^2.3.2",
