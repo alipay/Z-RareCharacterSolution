@@ -112,7 +112,7 @@ public class NameUtil {
     /**
      * 字母数字正则
      */
-    public static final Pattern LETTER_NUM_PATTERN = Pattern.compile("^.*[a-zA-Z]{2,}[0-9]*.*$");
+    public static final Pattern LETTER_NUM_PATTERN = Pattern.compile("^.*[a-zA-Z]+[0-9]*.*$");
 
     /**
      * 字母正则
