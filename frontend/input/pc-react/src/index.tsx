@@ -2,7 +2,7 @@ import { getWordsData, matchWordsRecommend } from 'ant-rare-words-utils';
 import { Button, Input, Modal, Result } from 'antd';
 import cls from 'classnames';
 import React, { useEffect, useState } from 'react';
-import { ALIPAY_ICON, ICON_DOWN } from './contants';
+import { ICON_DOWN } from './contants';
 import './index.less';
 import { FontLibrary, FontLibraryArray } from './types/font';
 
@@ -148,8 +148,7 @@ const RareWordsInput: React.FC<RareWordsInputProps> = ({
         className="rare-input-modal"
         title={
           <div className="title">
-            <img className="dun" src={ALIPAY_ICON} alt="盾" />
-            支付宝正在保护您的信息安全
+            正在保护您的信息安全
           </div>
         }
         open={isModalOpen}
@@ -187,7 +186,7 @@ const RareWordsInput: React.FC<RareWordsInputProps> = ({
           <div>
             <div className="search-bar">
               <Input
-                placeholder="请输入拼或汉字部件"
+                placeholder="请输入拼音或拆字"
                 className="search-bar-input"
                 maxLength={10}
                 size="large"
