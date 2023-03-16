@@ -1,6 +1,6 @@
 {
   "name": "ant-rare-words-input-react-pc",
-  "version": "0.0.1-beta.2",
+  "version": "0.0.1",
   "description": "生僻字输入键盘电脑版",
   "license": "MIT",
   "module": "dist/index.js",
@@ -43,7 +43,7 @@
     ]
   },
   "dependencies": {
-    "ant-rare-words-utils": "^0.0.1-beta.4",
+    "ant-rare-words-utils": "^0.0.2",
     "antd": "^5.2.2",
     "classnames": "^2.3.2"
   },
