@@ -58,27 +58,48 @@ public class NameUtilTest {
 
     @Test
     public void isAllChineseTest() {
+        Assert.assertTrue(NameUtil.isAllChinese("\uD87A\uDDF5")); //韦华 unicode
         Assert.assertTrue(NameUtil.isAllChinese("张"));
         Assert.assertTrue(NameUtil.isAllChinese("张三"));
-        Assert.assertTrue(NameUtil.isAllChinese("张"));
-        Assert.assertTrue(NameUtil.isAllChinese("张"));
-        Assert.assertTrue(NameUtil.isAllChinese("张𮧵"));
-        Assert.assertTrue(NameUtil.isAllChinese(""));
-        Assert.assertTrue(NameUtil.isAllChinese(""));
-        Assert.assertTrue(NameUtil.isAllChinese("𮧵"));
+        Assert.assertTrue(NameUtil.isAllChinese("张是一只小小鸟"));
+        Assert.assertTrue(NameUtil.isAllChinese("䶮")); //龙天 unicode
+        Assert.assertTrue(NameUtil.isAllChinese("")); //龙天 pua
+        Assert.assertTrue(NameUtil.isAllChinese("张\uD87A\uDDF5")); //韦华 unicode
+        Assert.assertTrue(NameUtil.isAllChinese("")); //韦华pua
+        Assert.assertTrue(NameUtil.isAllChinese("张𬱖")); //由页 unicode
+        Assert.assertTrue(NameUtil.isAllChinese("张\uD870\uDF86")); //王莹 unicode
+        Assert.assertTrue(NameUtil.isAllChinese("张\uD87A\uDDF5")); //韦华 unicode
+        Assert.assertTrue(NameUtil.isAllChinese("张"));  //韦华pua
+        Assert.assertTrue(NameUtil.isAllChinese("张䶮")); //龙天 unicode
+        Assert.assertTrue(NameUtil.isAllChinese("张")); //龙天 pua
+        Assert.assertTrue(NameUtil.isAllChinese("张·麦麦提"));
 
-        Assert.assertFalse(NameUtil.isAllChinese("张yan"));
-        Assert.assertFalse(NameUtil.isAllChinese("张1"));
-        Assert.assertFalse(NameUtil.isAllChinese("张yan"));
-        Assert.assertFalse(NameUtil.isAllChinese("zhang san"));
         Assert.assertFalse(NameUtil.isAllChinese("张？"));
-        Assert.assertFalse(NameUtil.isAllChinese(""));
+        Assert.assertFalse(NameUtil.isAllChinese("张?"));
+        Assert.assertFalse(NameUtil.isAllChinese("张？"));
+        Assert.assertFalse(NameUtil.isAllChinese("张("));
+        Assert.assertFalse(NameUtil.isAllChinese("张)"));
+        Assert.assertFalse(NameUtil.isAllChinese("张（"));
+        Assert.assertFalse(NameUtil.isAllChinese("张）"));
+        Assert.assertFalse(NameUtil.isAllChinese("张{"));
+        Assert.assertFalse(NameUtil.isAllChinese("张【"));
+        Assert.assertFalse(NameUtil.isAllChinese("张*"));
+        Assert.assertFalse(NameUtil.isAllChinese("张&"));
+        Assert.assertFalse(NameUtil.isAllChinese("张^"));
+        Assert.assertFalse(NameUtil.isAllChinese("张%"));
+        Assert.assertFalse(NameUtil.isAllChinese("张$"));
+        Assert.assertFalse(NameUtil.isAllChinese("张#"));
         Assert.assertFalse(NameUtil.isAllChinese("张@"));
         Assert.assertFalse(NameUtil.isAllChinese("张!"));
-        Assert.assertFalse(NameUtil.isAllChinese("张%"));
-        Assert.assertFalse(NameUtil.isAllChinese("张*"));
-        Assert.assertFalse(NameUtil.isAllChinese("张`"));
         Assert.assertFalse(NameUtil.isAllChinese("张~"));
+        Assert.assertFalse(NameUtil.isAllChinese("张。"));
+        Assert.assertFalse(NameUtil.isAllChinese("张，"));
+        Assert.assertFalse(NameUtil.isAllChinese("张12"));
+        Assert.assertFalse(NameUtil.isAllChinese("张wei"));
+        Assert.assertFalse(NameUtil.isAllChinese("张wei3"));
+        Assert.assertFalse(NameUtil.isAllChinese("张wei3。"));
+        Assert.assertFalse(NameUtil.isAllChinese("123"));
+        Assert.assertFalse(NameUtil.isAllChinese("abc"));
     }
 
     @Test

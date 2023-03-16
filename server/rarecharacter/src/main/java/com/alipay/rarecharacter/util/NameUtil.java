@@ -27,12 +27,12 @@ public class NameUtil {
      * 扩展F	（7473个）	2CEB0-2EBE0
      * 扩展G	（4939个）	30000-3134A
      */
-    public static final Pattern ALL_CHINESE_PATTERN = Pattern.compile("([\u4e00-\u9fa5]|[\u9fa6-\u9fef]|[\u3400-\u4db5]|[\ue000-\uf8ff]|[\\x{20000}-\\x{2A6D6})] |[\\x{2A700}-\\x{2B734})]|[\\x{2B740}-\\x{2B81D})]|[\\x{2B820}-\\x{2CEA1})]|[\\x{2CEB0}-\\x{2EBE0})]|[\\x{30000}-\\x{3134A})])");
+    public static final Pattern ALL_CHINESE_PATTERN = Pattern.compile("([\u00B7]|[\u4e00-\u9fa5]|[\u9fa6-\u9fef]|[\u3400-\u4db5]|[\ue000-\uf8ff]|[\\x{20000}-\\x{2A6D6}] |[\\x{2A700}-\\x{2B734}]|[\\x{2B740}-\\x{2B81D}]|[\\x{2B820}-\\x{2CEA1}]|[\\x{2CEB0}-\\x{2EBE0}]|[\\x{30000}-\\x{3134A}])");
 
     /**
-     * 字符串全部为汉字校验正则
+     * 字符串全部为汉字校验正则（包括少数民族中圆点）
      */
-    public static final Pattern STRING_ALL_CHINESE_PATTERN = Pattern.compile("^([\u4e00-\u9fa5]|[\u9fa6-\u9fef]|[\u3400-\u4db5]|[\ue000-\uf8ff]|[\\x{20000}-\\x{2A6D6})] |[\\x{2A700}-\\x{2B734})]|[\\x{2B740}-\\x{2B81D})]|[\\x{2B820}-\\x{2CEA1})]|[\\x{2CEB0}-\\x{2EBE0})]|[\\x{30000}-\\x{3134A})])+$");
+    public static final Pattern STRING_ALL_CHINESE_PATTERN = Pattern.compile("^([\u00B7]|[\u4e00-\u9fa5]|[\u9fa6-\u9fef]|[\u3400-\u4db5]|[\ue000-\uf8ff]|[\\x{20000}-\\x{2A6D6}] |[\\x{2A700}-\\x{2B734}]|[\\x{2B740}-\\x{2B81D}]|[\\x{2B820}-\\x{2CEA1}]|[\\x{2CEB0}-\\x{2EBE0}]|[\\x{30000}-\\x{3134A}])+$");
 
     /**
      * BMP平面汉字正则
@@ -181,7 +181,7 @@ public class NameUtil {
         if (StringUtils.isBlank(in)) {
             return false;
         }
-        return STRING_ALL_CHINESE_PATTERN.matcher(in).find();
+        return STRING_ALL_CHINESE_PATTERN.matcher(in).matches();
     }
 
     /**
@@ -288,20 +288,6 @@ public class NameUtil {
         }
         return ALL_CHINESE_PATTERN.matcher(certName).find();
     }
-
-
-    /**
-     * 是否包含PINYIN
-     *
-     * @param certName
-     * @return
-     */
-//    public static boolean isContainPinyin(String certName) {
-//        if (StringUtils.isBlank(certName)) {
-//            return false;
-//        }
-//        return INCLUDE_LETTER_REGEX.matcher(certName).find();
-//    }
 
     /**
      * 是否包含PINYIN
