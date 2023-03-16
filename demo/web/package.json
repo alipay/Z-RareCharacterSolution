@@ -7,7 +7,7 @@
     "build": "dumi build",
     "dev": "dumi dev",
     "start": "npm run dev",
-    "update-demo": "npm run build && rm -rf ../.docker/web/dist && mv ./dist ../.docker/web && git add . && git commit -m \"feat: 更新demo dist代码\""
+    "update-demo": "npm run build && rm -rf ../.docker/web/dist && mv ./dist ../.docker/web"
   },
   "commitlint": {
     "extends": [
