@@ -8,7 +8,7 @@
 | -------- | -------------------------------------------------------------------------------- | ----------------------- | ------ |
 | visible  | 是否可见                                                                         | boolean                 | false  |
 | type     | 键盘类型, pinyin（拼音）、stroke（笔画）、handwriting（手写），目前只支持 pinyin | string                  | pinyin |
-| showMask | 是否展示背景蒙层                                                                         | boolean                 | true   |
+| showMask | 是否展示背景蒙层                                                                 | boolean                 | true   |
 | safeArea | 安全距离                                                                         | boolean                 | true   |
 | onClose  | 关闭的时候触发的回调                                                             | () => void              | -      |
 | onChange | 输入完成的时候触发的回调                                                         | (value: string) => void | -      |
@@ -24,6 +24,7 @@ npm i antd-mini --save
 ```
 
 2. 在 json 文件中配置
+
 ```json
 {
   "usingComponents": {
@@ -57,7 +58,7 @@ Page({
   },
   onChange(value) {
     my.showToast({ content: 'onChange ' + value });
-  }
+  },
 });
 ```
 

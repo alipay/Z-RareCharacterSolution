@@ -111,6 +111,32 @@ isChineseNameValid('刘𪚔'); // return true
 isContainRareWords('刘𪚔'); // return true
 ```
 
+## 检索候选字
+
+获取到字库数据以后，根据用户输入的拼音或者拆字信息，检索字库得到匹配的候选字列表
+
+### 参数
+
+| 参数       | 类型       | 说明                                      |
+| ---------- | ---------- | ----------------------------------------- |
+| wordsData  | IWordsData | 字库数据                                  |
+| inputValue | string     | 当前输入的值                              |
+| filterKey  | string     | 过滤依据的 key 值，'pinyin','split','all' |
+
+### 返回值
+
+| 参数 | 类型       | 说明                           |
+| ---- | ---------- | ------------------------------ |
+| list | IWordsData | 符合要求并且排序好的候选项列表 |
+
+### 用法
+
+```js
+import { matchWordsRecommend } from 'ant-rare-words-utils';
+
+matchWordsRecommend(wordsData, 'YAN', 'all');
+```
+
 ## 获取字库数据
 
 返回 demo 字库数据，数据格式如下：
@@ -155,16 +181,6 @@ export interface IZDatas {
 
 ### 用法
 
-#### npm 包方式引用
-
-1. 安装工具包
-
-```bash
-npm install ant-rare-words-utils --save
-```
-
-2. 在页面初始化的逻辑里执行字体加载代码
-
 ```js
 import { getWordsData } from 'ant-rare-words-utils';
 
@@ -177,44 +193,4 @@ getWordsData({ forceUpdate: false })
   });
 ```
 
-#### cdn 方式引用
 
-```js
-<script type="text/javascript" src="https://unpkg.com/ant-rare-words-utils/dist/index.web.js" />
-
-<script type="text/javascript">
-window.RareWordsUtils.getWordsData({ forceUpdate: false })
-  .then(res => {
-    console.log(res);
-  })
-  .catch(err => {
-    console.log(err);
-  });
-</script>
-```
-
-## 检索候选字
-
-获取到字库数据以后，根据用户输入的拼音或者拆字信息，检索字库得到匹配的候选字列表
-
-### 参数
-
-| 参数       | 类型       | 说明                                      |
-| ---------- | ---------- | ----------------------------------------- |
-| wordsData  | IWordsData | 字库数据                                  |
-| inputValue | string     | 当前输入的值                              |
-| filterKey  | string     | 过滤依据的 key 值，'pinyin','split','all' |
-
-### 返回值
-
-| 参数 | 类型       | 说明                           |
-| ---- | ---------- | ------------------------------ |
-| list | IWordsData | 符合要求并且排序好的候选项列表 |
-
-### 用法
-
-```js
-import { matchWordsRecommend } from 'ant-rare-words-utils';
-
-matchWordsRecommend(wordsData, 'YAN', 'all');
-```
