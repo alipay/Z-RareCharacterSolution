@@ -21,7 +21,7 @@
 1. 安装工具包
 
 ```bash
-tnpm install ant-rare-words-input-react-pc --save
+npm install ant-rare-words-input-react-pc --save
 ```
 
 2. 在页面初始化的逻辑里执行字体加载代码
@@ -29,27 +29,34 @@ tnpm install ant-rare-words-input-react-pc --save
 ```jsx
 import RareWordsInput from 'ant-rare-words-input-react-pc';
 
-const [value, setValue] = React.useState < string > '';
+const Page = () => {
+  const [value, setValue] = React.useState<string>('');
 
-const handleChange = (e) => {
-  const value = e.target.value;
-  setValue(value);
+  const handleChange = (e) => {
+    const value = e.target.value;
+    setValue(value);
+  };
+
+  return (
+    <div className="container">
+       <input
+        className="input"
+        type="text"
+        value={value}
+        onChange={handleChange}
+      />
+
+      <RareWordsInput
+        onFinish={(curValue) => {
+          setValue(value => value + curValue);
+        }}
+      >
+        <span className="tips">录入生僻字</span>
+      </RareInput>
+    </div>
+  );
 };
 
-<input
-  className="input"
-  type="text"
-  value={value}
-  onChange={handleChange}
-/>
-
-<RareWordsInput
-  onFinish={(curValue) => {
-    setValue(value => value + curValue);
-  }}
->
-  <span className="tips">录入生僻字</span>
-</RareInput>
 ```
 
 ### CDN 方式引入
@@ -58,46 +65,31 @@ const handleChange = (e) => {
 
 ！！！这里注意的是此键盘组件基于 React 运行的，并且没有内置 React 库，如果你的系统也没有引入 React 相关的 script，请记得在此之前先引入：
 
-```html
-<script
-  src="https://cdn.bootcdn.net/ajax/libs/react/18.2.0/umd/react.production.min.js"
-  crossorigin
-></script>
-<script
-  src="https://cdn.bootcdn.net/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"
-  crossorigin
-></script>
+```xml
+<script src="https://cdn.bootcdn.net/ajax/libs/react/18.2.0/umd/react.production.min.js" crossorigin></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js" crossorigin></script>
 ```
 
 示例代码：
 
-```html
+```xml
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://cdn.bootcdn.net/ajax/libs/react/18.2.0/umd/react.production.min.js"
-      crossorigin
-    ></script>
-    <script
-      src="https://cdn.bootcdn.net/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"
-      crossorigin
-    ></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/react/18.2.0/umd/react.production.min.js" crossorigin></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js" crossorigin></script>
     <style>
       :root {
-        --px: 0.5px !important;
+        --px: 0.5px !important; // 设置组件px单位
       }
     </style>
   </head>
   <body>
     <div id="app"></div>
-    <script
-      src="https://npm.elemecdn.com/ant-rare-words-input-react/dist/ant-rare-words-input-react.min.js"
-      crossorigin
-    ></script>
+    <script src="https://unpkg.com/ant-rare-words-input-react-pc@0.0.1/dist/ant-rare-words-input-react-pc.min.js" crossorigin></script>
     <script>
       const domNode = document.getElementById('app');
       const root = ReactDOM.createRoot(domNode);
@@ -108,26 +100,30 @@ const handleChange = (e) => {
 </html>
 ```
 
+> 如果 unpkg.com 被墙了，可以替换成 npm.elemecdn.com 的国内镜像，使用地址 https://npm.elemecdn.com/ant-rare-words-input-react-pc/dist/ant-rare-words-input-react-pc.min.js
+>
+> 如果不希望跟随版本更新，可以限制引入 cdn 时的版本，使用地址 https://npm.elemecdn.com/ant-rare-words-input-react-pc@0.0.1/dist/ant-rare-words-input-react-pc.min.js
+
 ## 开发
 
 ```bash
 # 安装依赖
-$ cnpm install
+$ npm install
 
 # 启动demo
-$ cnpm start
+$ npm start
 
 # 打包
-$ cnpm run build
+$ npm run build
 
 # 观察模式打包
-$ cnpm run build:watch
+$ npm run build:watch
 
 # 构建文档
-$ cnpm run docs:build
+$ npm run docs:build
 
 # 检测潜在问题
-$ cnpm run doctor
+$ npm run doctor
 ```
 
 ## LICENSE
