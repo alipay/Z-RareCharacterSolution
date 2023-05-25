@@ -145,7 +145,7 @@ docker-compose up
 + [服务端姓名服务接口](https://rare-words-solution-doc.alipay.com/server)
 
 ## 六、联系我们
-您可以通过提交[issues](https://github.com/alipay/Z-RareCharacterSolution/issues)、扫描下方二维码加入生僻字交流群
+您可以通过提交[issues](https://gitee.com/ant-zsolution/Z-RareCharacterSolution/issues)、扫描下方二维码加入生僻字交流群
 
 ![联系我们](https://mdn.alipayobjects.com/huamei_2fq7mt/afts/img/A*g8GRQZsMwYYAAAAAAAAAAAAADh58AQ/original)
 
