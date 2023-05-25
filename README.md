@@ -147,7 +147,7 @@ docker-compose up
 ## 六、联系我们
 您可以通过访问[issues](https://gitee.com/ant-zsolution/Z-RareCharacterSolution/issues)、扫描下方二维码加入生僻字交流群
 
-![联系我们](https://mdn.alipayobjects.com/huamei_2fq7mt/afts/img/A*YtYHTKS4_YgAAAAAAAAAAAAADh58AQ/original)
+![联系我们](https://mdn.alipayobjects.com/huamei_2fq7mt/afts/img/A*g8GRQZsMwYYAAAAAAAAAAAAADh58AQ/original)
 
 ## 七、感谢
 + Z字库生僻字解决方案使用的字体是由阿里巴巴普惠体提供的，感谢阿里巴巴普惠体对此项目的大力支持。
