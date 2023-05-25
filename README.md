@@ -116,6 +116,7 @@ Z-RareCharacterSolution 项目服务端部分，即 rareCharacter（java 版本�
 ```
 git clone https://github.com/alipay/Z-RareCharacterSolution.git
 ```
+> 公安系统PUA映射关系可联系方正获取
 
 ### 4.3 启动demo
 1. 检查本地是否安装docker，输入
@@ -144,9 +145,9 @@ docker-compose up
 + [服务端姓名服务接口](https://rare-words-solution-doc.alipay.com/server)
 
 ## 六、联系我们
-您可以通过访问[issues](https://gitee.com/organizations/ant-zsolution/issues)、加入交流群、或者支付宝扫码提交联系信息的方式联系到我们。
+您可以通过访问[issues](https://gitee.com/ant-zsolution/Z-RareCharacterSolution/issues)、扫描下方二维码加入生僻字交流群
 
-![联系我们](https://foruda.gitee.com/images/1680145506534490717/5bd381ab_1727097.png)
+![联系我们](https://mdn.alipayobjects.com/huamei_2fq7mt/afts/img/A*YtYHTKS4_YgAAAAAAAAAAAAADh58AQ/original)
 
 ## 七、感谢
 + Z字库生僻字解决方案使用的字体是由阿里巴巴普惠体提供的，感谢阿里巴巴普惠体对此项目的大力支持。
