@@ -1,6 +1,7 @@
 ---
-mobile: true
 title: 手机端输入组件
+iframeAllow: 'fullscreen *'
+mobile: false
 order: 3
 ---
 
@@ -70,5 +71,17 @@ const handleChange = (e) => {
 ```
 
 ## 示例
+切换手机端访问体验更佳
 
-<code src="./demo/mobile.tsx" compact="true" iframe mobile="true"></code>
+<code src="./demo/mobile.tsx" compact="true" height="600px" iframe mobile="true"></code>
+
+<style>
+  .dumi-default-previewer-demo {
+    max-width: 375px;
+    height: 664px;
+  }
+
+  .dumi-default-previewer-demo iframe {
+    height: 640px;
+  }
+</style>

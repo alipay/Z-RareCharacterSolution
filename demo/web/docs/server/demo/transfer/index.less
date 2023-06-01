@@ -24,7 +24,6 @@
         margin-top: 0;
       }
 
-
       &-label {
         min-width: 80px;
         text-align: left;
@@ -151,5 +150,20 @@
       font-size: 14px;
       margin: 2px 0;
     }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .pc-container.transfer .form__item-input {
+    width: 100%;
+  }
+
+  .pc-container.transfer .result-tips {
+    width: 70%;
+  }
+
+  .pc-container.transfer .form__wrap {
+    flex-flow: column nowrap;
+    align-items: center;
   }
 }

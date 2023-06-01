@@ -139,7 +139,7 @@ export default () => {
                   status={inputError ? 'error' : ''}
                 />
                 <RareWordsInput onFinish={handleRareWordsInput}>
-                  <Icon className="form__item-icon" component={KeyBoardIcon} style={{ color: 'red' }} />
+                  <Icon className="form__item-icon" component={KeyBoardIcon} />
                 </RareWordsInput>
               </div>
             </div>
