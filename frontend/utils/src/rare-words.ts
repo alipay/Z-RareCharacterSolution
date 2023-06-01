@@ -7,11 +7,8 @@
  * @example
 
  * import { isContainRareWords } from 'ant-rare-words-utils'
- * isContainRareWords('hello')
- * // => false
- *
- * isContainRareWords('䶮')
- * // => true
+ * isContainRareWords('hello') => false
+ * isContainRareWords('䶮') => true
  */
 export function isContainRareWords(str: string): boolean {
   if (!str) return false;
@@ -25,7 +22,7 @@ export function isContainRareWords(str: string): boolean {
  * @param {string} name 中文姓名
  * @returns {boolean} 合法中文姓名则返回 true
  */
-export const isChineseNameValid = (name: string = '') => {
+export const isChineseNameValid = (name: string) => {
   // const reg =
   //   /^[\uE000-\uF8FF\u3400-\u4DB5\u4E00-\u9FA5\u9FA6-\u9FB3\u9FBC-\u9FEF\u00B7\u{20000}-\u{2A6D6}\u{2A700}-\u{2B734}\u{2B740}-\u{2B81D}\u{2B820}-\u{2CEA1}\u{2CEB0}-\u{2EBE0}]+$/u;
   const regEs5 =

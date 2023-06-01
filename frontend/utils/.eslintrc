@@ -6,7 +6,7 @@
     "jsdoc/require-returns-check": 0
   },
   "parserOptions": {
-    "project": "./tsconfig.eslint.json"
+    "project": "./frontend/utils/tsconfig.eslint.json"
   },
   "ignorePatterns": ["dist", "coverage", "node_modules", "**/*.d.ts", "**/*.test.js", "config/webpack.config.js", "test"]
 }

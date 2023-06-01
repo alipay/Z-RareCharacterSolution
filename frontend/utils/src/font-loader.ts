@@ -8,7 +8,7 @@ enum IFontLoaderStatus {
   ready = 'ready', // 准备加载
   loading = 'loading', // 加载中
   completed = 'completed', // 加载完成
-  failed = 'failed' // 加载失败
+  failed = 'failed', // 加载失败
 }
 
 export class FontLoader {
@@ -39,7 +39,10 @@ export class FontLoader {
 
     try {
       this.status = IFontLoaderStatus.loading;
-      const fontFace = new window.FontFace(this.options.fontName as string, `url(${this.options.fontSrc})`);
+      const fontFace = new window.FontFace(
+        this.options.fontName as string,
+        `url(${this.options.fontSrc})`,
+      );
       document.fonts.add(fontFace);
       fontFace
         .load()
