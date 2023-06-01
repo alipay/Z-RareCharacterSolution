@@ -157,8 +157,8 @@ export default () => {
               </div>
               <ul>
                 <li>
-                  pua和unicode正式码互转，给定pua码字返回unicode码字（如张䶮返回张）;
-                  给定unicode码字返回pua码字（如张返回张䶮）
+                  pua和unicode正式码互转，给定pua码字返回unicode码字（如张䶮返回张ᵖᵘᵃ）;
+                  给定unicode码字返回pua码字（如张ᵖᵘᵃ返回张䶮）
                 </li>
                 <li>
                   指定目标编码，给定拼音姓名，指定unicode码字（如张yan返回张䶮,张𰎠,张𪩘
@@ -184,7 +184,6 @@ export default () => {
                   <Icon
                     className="form__item-icon keyboard"
                     component={KeyBoardIcon}
-                    style={{ color: 'red' }}
                   />
                 </RareWordsInput>
               </div>
