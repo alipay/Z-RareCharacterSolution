@@ -44,7 +44,7 @@
   },
   "dependencies": {
     "@react-spring/web": "^9.6.1",
-    "ant-rare-words-utils": "^0.0.2",
+    "ant-rare-words-utils": "^0.0.4",
     "classnames": "^2.3.2",
     "lodash": "^4.17.21",
     "postcss-plugin-px2rem": "^0.8.1"

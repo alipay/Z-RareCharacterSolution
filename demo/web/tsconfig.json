@@ -26,5 +26,5 @@
     "docs",
     "tests"
   ],
-  "include": [".dumi/**/*", ".dumirc.ts", "src/**/*"]
+  "include": [".dumi/**/*", ".dumirc.ts", "src/**/*", "types", "utils", "service"]
 }

@@ -105,7 +105,7 @@ export default () => {
               </div>
               <ul>
                 <li>输入unicode字姓名（如张䶮），返回各种拼音姓名（如张yan，张(yan)，张YAN，张YAN3等）</li>
-                <li>输入PUA姓名（如张），返回unicode码字姓名，各种拼音姓名（如张yan，张(yan)，张YAN，张YAN3等）</li>
+                <li>输入PUA姓名（如张ᵖᵘᵃ），返回unicode码字姓名，各种拼音姓名（如张yan，张(yan)，张YAN，张YAN3等）</li>
                 <li>输入拼音姓名（如张YAN），返回各种拼音姓名（如张yan，张YAN，张(yan)等）</li>
                 <li>输入拆字姓名（如刘龙天、刘（龙天）），返回unicode码字姓名</li>
               </ul>
@@ -125,7 +125,7 @@ export default () => {
                   status={inputError ? 'error' : ''}
                 />
                 <RareWordsInput onFinish={handleRareWordsInput}>
-                  <Icon className="form__item-icon" component={KeyBoardIcon} style={{ color: 'red' }} />
+                  <Icon className="form__item-icon" component={KeyBoardIcon} />
                 </RareWordsInput>
               </div>
             </div>

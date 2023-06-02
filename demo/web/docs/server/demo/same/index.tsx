@@ -148,10 +148,10 @@ export default () => {
               </div>
               <ul>
                 <li>
-                  同一生僻字姓名的unicode正式码字和PUA码字，则相同，如张䶮和张
+                  同一生僻字姓名的unicode正式码字和PUA码字，则相同，如张䶮和张ᵖᵘᵃ
                 </li>
                 <li>
-                  除以上外，同一生僻字姓名的拼音，拆字，unicode码字，pua码字，繁简异体字，则可能相同，如张䶮和张yan，张和张龑
+                  除以上外，同一生僻字姓名的拼音，拆字，unicode码字，pua码字，繁简异体字，则可能相同，如张䶮和张yan，张ᵖᵘᵃ和张龑
                 </li>
               </ul>
             </div>
@@ -175,7 +175,6 @@ export default () => {
                       <Icon
                         className="form__item-icon keyboard"
                         component={KeyBoardIcon}
-                        style={{ color: 'red' }}
                       />
                     </RareWordsInput>
                   </div>
@@ -194,7 +193,6 @@ export default () => {
                       <Icon
                         className="form__item-icon keyboard"
                         component={KeyBoardIcon}
-                        style={{ color: 'red' }}
                       />
                     </RareWordsInput>
                   </div>
@@ -211,7 +209,6 @@ export default () => {
                       <Icon
                         className="form__item-icon success"
                         component={SuccessIcon}
-                        style={{ color: 'red' }}
                       />
                       <span>相同</span>
                     </div>
