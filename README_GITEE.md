@@ -36,7 +36,7 @@ Z-RareCharacterSolution 是蚂蚁集团开源生僻字解决方案，围绕生�
 
 ## 三、目录介绍
 
-### 3.1 [前端服务](https://github.com/alipay/Z-RareCharacterSolution/tree/main/frontend)
+### 3.1 [前端服务](https://gitee.com/ant-zsolution/Z-RareCharacterSolution/tree/main/frontend)
 
 ```javascript
 frontend
@@ -96,12 +96,12 @@ Z-RareCharacterSolution 项目服务端部分，即 rareCharacter（java 版本�
 - **util**: 工具类
 - **test**: 测试类
 
-### 3.2 [demo演示](https://github.com/alipay/Z-RareCharacterSolution/tree/main/demo)
+### 3.2 [demo演示](https://gitee.com/ant-zsolution/Z-RareCharacterSolution/tree/main/demo)
 
 通过demo演示，使用者可以一键在本地部署并运行，体验 Z-RareCharacterSolution 提供的各类生僻字能力。
-+ [.docker](https://github.com/alipay/Z-RareCharacterSolution/tree/main/demo/.docker): docker 相关配置， 包括服务启动，字库创建和初始化等
-+ [server/src](https://github.com/alipay/Z-RareCharacterSolution/tree/main/demo/server/src)：服务端调用 rareCharacter 的示例
-+ [web](https://github.com/alipay/Z-RareCharacterSolution/tree/main/demo/web): 可以体验生僻字输入和显示组件
++ [.docker](https://gitee.com/ant-zsolution/Z-RareCharacterSolution/tree/main/demo/.docker): docker 相关配置， 包括服务启动，字库创建和初始化等
++ [server/src](https://gitee.com/ant-zsolution/Z-RareCharacterSolution/tree/main/demo/server/src)：服务端调用 rareCharacter 的示例
++ [web](https://gitee.com/ant-zsolution/Z-RareCharacterSolution/tree/main/demo/server/web): 可以体验生僻字输入和显示组件
 
 ## 四、快速开始
 为帮助用户快速了解Z-RareCharacterSolution的服务能力，我们搭建了docker的示例，用户在几分钟内通过几个命令将docker在本地运行起来，以快速了解生僻字处理的各项能力。
@@ -112,9 +112,9 @@ Z-RareCharacterSolution 项目服务端部分，即 rareCharacter（java 版本�
 3. [Apache Maven 3.2.5 或者更高版本](https://archive.apache.org/dist/maven/maven-3/3.2.5/binaries/)
 
 ### 4.2 下载代码
-进入蚂蚁开源网站 https://github.com/alipay/Z-RareCharacterSolution，下载代码至本地
+进入蚂蚁开源网站 https://gitee.com/ant-zsolution/Z-RareCharacterSolution，下载代码至本地
 ```
-git clone https://github.com/alipay/Z-RareCharacterSolution.git
+git clone https://gitee.com/ant-zsolution/Z-RareCharacterSolution.git
 ```
 > 公安系统PUA映射关系可联系方正字库获取
 
@@ -145,7 +145,7 @@ docker-compose up
 + [服务端姓名服务接口](https://rare-words-solution-doc.alipay.com/server)
 
 ## 六、联系我们
-您可以通过提交[issues](https://github.com/alipay/Z-RareCharacterSolution/issues)、扫描下方二维码加入生僻字交流群
+您可以通过提交[issues](https://gitee.com/ant-zsolution/Z-RareCharacterSolution/issues)、扫描下方二维码加入生僻字交流群
 
 ![联系我们](https://mdn.alipayobjects.com/huamei_2fq7mt/afts/img/A*g8GRQZsMwYYAAAAAAAAAAAAADh58AQ/original)
 
