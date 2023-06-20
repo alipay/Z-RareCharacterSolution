@@ -160,4 +160,4 @@ docker-compose up
 
 此处列出了已知在生产环境使用了 Z-RareCharacterSolution 全部或者部分组件的公司或组织。
 
-![已知用户](https://foruda.gitee.com/images/1680145214030623213/c1304495_1727097.png)
+![已知用户](https://mdn.alipayobjects.com/huamei_2fq7mt/afts/img/A*oviHR46XARAAAAAAAAAAAAAADh58AQ/original)
