@@ -60,7 +60,7 @@ css 直接覆写
 
 ```css
 .xxx {
-  font-familay: 原有字体, 'rare-words-font';
+  font-family: 原有字体, 'rare-words-font';
 }
 ```
 

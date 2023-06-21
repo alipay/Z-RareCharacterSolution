@@ -1,4 +1,3 @@
-import { getWordsData, matchWordsRecommend } from 'ant-rare-words-utils';
 import React, { Fragment, useEffect, useRef, useState } from 'react';
 import { ErrorPage, InputValueDisplay, MatchWords, Popup } from './components';
 import AppContext from './context';
@@ -6,6 +5,7 @@ import useInputValue from './hooks/InputValue';
 import PinYinKeybord from './keyboard/pinyin';
 import StrokeKeybord from './keyboard/stroke';
 import { ICommonError, InputTypes, IWordsData } from './typings';
+import { getWordsData, matchWordsRecommend } from '../../../utils/src/index';
 import { mergeProps } from './utils';
 import './index.less';
 
@@ -84,7 +84,7 @@ const defaultProps = {
   onReady: () => {},
 };
 
-const RareWordsInput = React.forwardRef<HTMLDivElement, IProps>((p, ref) => {
+const RareWordsInput = React.forwardRef<HTMLDivElement, IProps>((p: IProps) => {
   const props = mergeProps(defaultProps, p);
   const { visible, type, onClose, onShow, destroyOnClose, forceRender } = props;
 
@@ -204,7 +204,6 @@ const RareWordsInput = React.forwardRef<HTMLDivElement, IProps>((p, ref) => {
       }}
     >
       <div
-        ref={ref}
         className="rare-words-input__keybord"
         onMouseDown={(e) => e.preventDefault()}
       >

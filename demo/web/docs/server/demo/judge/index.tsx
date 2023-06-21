@@ -1,20 +1,20 @@
 import React from 'react';
 import { Input, Button, Card, Alert } from 'antd';
-import RareWordsInput from 'ant-rare-words-input-react-pc';
 import Icon from '@ant-design/icons';
+import RareWordsInput from '../../../../../../frontend/input/pc-react/src/index';
 import { isRareNameService } from '../../../../service';
 import { KeyBoardIcon } from '../../../../components/icons';
 import './index.less';
 
 export default () => {
-  const [logs, setLogs] = React.useState<{ msg: string; time: number }[]>([]);
-  const [name, setName] = React.useState<string>('');
-  const [loading, setLoading] = React.useState<boolean>(false);
-  const [inputError, setInputError] = React.useState<boolean>(false);
-  const [showSuccess, setShowSuccess] = React.useState<boolean>(false);
-  const [result, setResult] = React.useState<string>('');
-  const [showError, setShowError] = React.useState<boolean>(false);
-  const [errorMsg, setErrorMsg] = React.useState<string>('');
+  const [logs, setLogs] = React.useState([]);
+  const [name, setName] = React.useState('');
+  const [loading, setLoading] = React.useState(false);
+  const [inputError, setInputError] = React.useState(false);
+  const [showSuccess, setShowSuccess] = React.useState(false);
+  const [result, setResult] = React.useState('');
+  const [showError, setShowError] = React.useState(false);
+  const [errorMsg, setErrorMsg] = React.useState('');
   let startTime = Date.now();
 
   // 记录日志
@@ -33,7 +33,7 @@ export default () => {
   /**
    * 姓名发生变化
    */
-  const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleNameChange = (e) => {
     const { value: inputValue } = e.target;
     if (inputValue) {
       if (showError) setShowError(false);

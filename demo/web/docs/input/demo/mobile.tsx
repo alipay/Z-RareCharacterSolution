@@ -1,11 +1,12 @@
 import React from 'react';
-import RareWordsInput from 'ant-rare-words-input-react';
+import RareWordsInput from '../../../../../frontend/input/h5-react/src/index';
+import { FontLoader } from '../../../../../frontend/utils';
 import './mobile.less';
 
 export default () => {
-  const [logs, setLogs] = React.useState<{ msg: string; time: number }[]>([]);
-  const [value, setValue] = React.useState<string>('');
-  const [visible, setvisible] = React.useState<boolean>(false);
+  const [logs, setLogs] = React.useState([]);
+  const [value, setValue] = React.useState('');
+  const [visible, setvisible] = React.useState(false);
   const startTime = Date.now();
 
   // 记录日志
@@ -31,6 +32,14 @@ export default () => {
   // 开始加载字体
   React.useEffect(() => {
     printLog('开始加载组件');
+    new FontLoader({
+      // 字体文件放置在demo/web/public/fonts下，可以改成自定义的在线字体地址
+      fontSrc: window.location.origin + '/fonts/RareWordsFonts.ttf',
+      fontName: 'RareWordsFont',
+      onError: (err) => {
+        printLog('字体加载失败 - ' + err.message);
+      },
+    });
   }, []);
 
   return (

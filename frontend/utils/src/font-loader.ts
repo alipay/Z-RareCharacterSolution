@@ -39,6 +39,7 @@ export class FontLoader {
 
     try {
       this.status = IFontLoaderStatus.loading;
+      console.log('[Z-RareCharacterSolution] [utils] --> 开始加载字体: ' + this.options.fontSrc);
       const fontFace = new window.FontFace(
         this.options.fontName as string,
         `url(${this.options.fontSrc})`,
@@ -47,12 +48,14 @@ export class FontLoader {
       fontFace
         .load()
         .then(() => {
+          console.log('[Z-RareCharacterSolution] [utils] --> 加载字体成功');
           this.status = IFontLoaderStatus.completed;
           if (this.options.autoSetFont) {
             // 将字体设置的到body根节点
             const curBodyFontAttr = getComputedStyle(document.body).fontFamily;
             const newBodyFontAttr = `${curBodyFontAttr}, '${fontFace.family}'`;
             document.body.style.fontFamily = newBodyFontAttr;
+            console.log('[Z-RareCharacterSolution] [utils] --> 已设置字体到body上');
           }
           if (this.options?.onSuccess) this.options.onSuccess(fontFace);
         })
@@ -65,6 +68,7 @@ export class FontLoader {
   }
 
   handleError(err) {
+    console.log('[Z-RareCharacterSolution] [utils] --> 加载字体失败', err);
     this.status = IFontLoaderStatus.failed;
     if (this.options?.onError) this.options.onError(err);
   }
