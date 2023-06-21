@@ -1,10 +1,10 @@
-import { getWordsData, matchWordsRecommend } from 'ant-rare-words-utils';
 import { Button, Input, Modal, Result } from 'antd';
 import cls from 'classnames';
 import React, { useEffect, useState } from 'react';
 import { ICON_DOWN } from './contants';
-import './index.less';
 import { FontLibrary, FontLibraryArray } from './types/font';
+import { getWordsData, matchWordsRecommend } from '../../../utils/src/index';
+import './index.less';
 
 export interface RareWordsInputProps {
   children?: React.ReactNode;

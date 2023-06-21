@@ -43,7 +43,7 @@
     ]
   },
   "dependencies": {
-    "ant-rare-words-utils": "^0.0.4",
+    "ant-rare-words-utils": "^0.0.6",
     "antd": "^5.2.2",
     "classnames": "^2.3.2"
   },

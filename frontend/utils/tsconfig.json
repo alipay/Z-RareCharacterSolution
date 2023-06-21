@@ -10,8 +10,7 @@
     "baseUrl": "./",
     "outDir": "dist",
     "plugins": [],
-    "typeRoots": ["./types"],
-    "types": ["mocha", "node"]
+    "typeRoots": ["./types"]
   },
   "include": ["./src", "./types"],
   "exclude": ["config/webpack.config.js"]

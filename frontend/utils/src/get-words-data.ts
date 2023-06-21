@@ -15,10 +15,12 @@ export function getWordsData(): Promise<IGetWordsDataResult> {
     // 加载字体
     loadFont(fontUrl)
       .then(font => {
+        const data = formatZDatas(datas);
+        console.log('[Z-RareCharacterSolution] [utils] --> 字库读取成功', data);
         resolve({
           fontFace: font,
           fontUrl,
-          data: formatZDatas(datas),
+          data,
         });
       })
       .catch(error => {

@@ -1,7 +1,7 @@
 export const ZDATAS = {
   version: '1.0.5',
   fontUrl:
-    'https://mdn.alipayobjects.com/huamei_2fq7mt/afts/file/A*g__cRomck1EAAAAAAAAAAAAADh58AQ/RareWordsFonts-v1.0.11.ttf',
+    'https://mdn.alipayobjects.com/huamei_2fq7mt/afts/file/A*N-FpRpJEmZgAAAAAAAAAAAAADh58AQ/RareWordsFonts-v1.0.12.ttf',
   datas: [
     {
       charId: 'fa95d0',
@@ -2532,6 +2532,19 @@ export const ZDATAS = {
       puaCodePoint: '',
       pinYinChars: [{ char: 'LOU4' }],
       splitChars: [{ char: '娄欠' }],
+      weight: 8,
+      extInfo: '',
+    },
+    {
+      charId: '531db3',
+      unicodeChar: '𮀎',
+      unicodeFont: '',
+      unicodeCodePoint: '2E00E',
+      puaChar: '',
+      puaFont: '',
+      puaCodePoint: '',
+      pinYinChars: [{ char: 'LA4' }],
+      splitChars: [{ char: '分石' }],
       weight: 8,
       extInfo: '',
     },
