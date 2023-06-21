@@ -1,10 +1,10 @@
 import React from 'react';
-import { FontLoader } from 'ant-rare-words-utils';
+import { FontLoader } from '../../../../frontend/utils/src/index';
 import './index.less';
 
 export default () => {
-  const [logs, setLogs] = React.useState<{ msg: string; time: number }[]>([]);
-  const [loaded, setLoaded] = React.useState<boolean>(false);
+  const [logs, setLogs] = React.useState([]);
+  const [loaded, setLoaded] = React.useState(false);
   let startTime = Date.now();
 
   // 记录日志
@@ -19,6 +19,8 @@ export default () => {
       startTime = Date.now();
       printLog('开始加载字体', false);
       new FontLoader({
+        // 字体文件放置在demo/web/public/fonts下，可以改成自定义的在线字体地址
+        fontSrc: window.location.origin + '/fonts/RareWordsFonts.ttf',
         fontName: 'rare-words-font',
         onSuccess: () => {
           setLoaded(true);
