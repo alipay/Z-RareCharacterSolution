@@ -7,23 +7,22 @@ import { MatchWordTips } from '../MatchWordTips';
 import './index.less';
 
 interface IProps {
-  value: IWordsData; // Z字库数据
-  onClick: (word: string) => void; // 选择候选字
-  onClose: () => void; // 点击收起键盘
-  onSwitch: () => void; // 切换键盘
+  value: IWordsData;
+  onClick: (word: string) => void;
+  onClose: () => void;
 }
 
 const MatchWords: React.FC<IProps> = (props) => {
   const wordsContainerRef = useRef<HTMLDivElement>(null);
   const wordRef = useRef<HTMLDivElement>(null);
-  const { displayStr, keyboardType } = useContext(AppContext);
+  const { displayStr } = useContext(AppContext);
   const [showMore, setShowMore] = useState<boolean>(false); // 点击展示展示更多候选字
   const [maxDisplayNum, setMaxDisplayNum] = useState<number>(0); // 一行最大能展示的候选字
 
   // 过滤掉不应该展示出来的候选字
   const wordList = props.value.filter((item) => !isWordEmpty(item));
   // 图标类名
-  let iconName = 'icon-arrow-down';
+  let iconName = 'icon-keyboard-hide';
   if (wordList.length > maxDisplayNum) {
     if (showMore) {
       iconName = 'icon-arrow-up';
@@ -38,7 +37,7 @@ const MatchWords: React.FC<IProps> = (props) => {
   /**
    * 点击查看更多或者收起键盘
    */
-  const handleLookMore = () => {
+  const hanleLookMore = () => {
     // 字数不足一行，点击按钮关闭输入框
     if (!isWordsOverflow) {
       if (props.onClose) props.onClose();
@@ -112,7 +111,7 @@ const MatchWords: React.FC<IProps> = (props) => {
           )}
           {/* 未输入值的时候的提示 */}
           {isInputValueEmpty && hasNoMacthWods && (
-            <MatchWordTips type={`${keyboardType}-placeholder`} />
+            <MatchWordTips type="placeholder" />
           )}
           {/* 未找到匹配项提示 */}
           {!isInputValueEmpty && hasNoMacthWods && (
@@ -124,18 +123,12 @@ const MatchWords: React.FC<IProps> = (props) => {
         </div>
         <div
           className={cls('rare-words-input__match-words-right', {
-            'rare-words-input__match-words-overflow':
-              isWordsOverflow && !showMore,
+            'rare-words-input__match-words-overflow': isWordsOverflow && !showMore,
             'rare-words-input__match-words-sticky': showMore,
           })}
+          onClick={hanleLookMore}
         >
-          {!showMore && (
-            <i
-              className={cls('iconfont', 'icon-keyboard-switch')}
-              onClick={props.onSwitch}
-            />
-          )}
-          <i className={cls('iconfont', iconName)} onClick={handleLookMore} />
+          <i className={cls('iconfont', iconName)} />
         </div>
       </div>
     </div>

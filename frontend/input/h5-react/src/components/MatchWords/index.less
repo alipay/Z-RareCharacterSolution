@@ -38,7 +38,6 @@
   }
 
   &-sticky {
-    width: calc(48 * var(--px, 1px)) !important;
     position: sticky !important;
     top: 0 !important;
     left: 0 !important;
@@ -122,7 +121,7 @@
   }
 
   &-right {
-    width: auto;
+    width: calc(48 * var(--px, 1px));
     height: calc(48 * var(--px, 1px));
     display: flex;
     flex-flow: row nowrap;
@@ -131,10 +130,6 @@
     position: relative;
     margin-top: calc(4 * var(--px, 1px));
     color: #333;
-
-    .icon-keyboard-switch {
-      margin-right: 14px;
-    }
   }
 
   &-overflow {
