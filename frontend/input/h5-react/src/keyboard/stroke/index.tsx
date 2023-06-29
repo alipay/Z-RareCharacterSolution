@@ -4,7 +4,7 @@ import { BTN_TEXT, STROKE_MAP } from '../../contants';
 import AppContext from '../../context';
 import './index.less';
 
-const StrokeKeyboard: React.FC = () => {
+const StrokeKeybord: React.FC = () => {
   const { addChar } = React.useContext(AppContext);
   /**
    * 处理字母点击事件
@@ -21,7 +21,10 @@ const StrokeKeyboard: React.FC = () => {
         {STROKE_MAP.map(({ label, value, extraClassName }) => (
           <div
             key={value}
-            className={cls('rare-words-input__stroke-key', extraClassName)}
+            className={cls(
+              'rare-words-input__stroke-key',
+              extraClassName,
+            )}
             data-value={value}
             onClick={handleClick}
           >
@@ -64,4 +67,4 @@ const StrokeKeyboard: React.FC = () => {
   );
 };
 
-export { StrokeKeyboard };
+export default StrokeKeybord;
