@@ -7,18 +7,10 @@ interface IProps {
   data?: object; // 动态参数
 }
 
-type IKeys =
-  | 'stroke-placeholder'
-  | 'split-placeholder'
-  | 'pinyin-placeholder'
-  | 'handwriting-placeholder'
-  | 'match-words-empty';
+type IKeys = 'placeholder' | 'match-words-empty';
 
 const TEMPLATE = {
-  'pinyin-placeholder': '请输入生僻字对应的拼音',
-  'split-placeholder': '请输入生僻字对应的拆字形式',
-  'stroke-placeholder': '请输入生僻字对应的笔画顺序',
-  'handwriting-placeholder': '请在下方面板书写生僻字',
+  placeholder: '请输入生僻字对应的拼音',
   // 'match-words-empty': '未找到和”{inputValue}“匹配的生僻字'
   'match-words-empty': '更多生僻字完善中，敬请期待',
 };

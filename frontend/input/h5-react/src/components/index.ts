@@ -1,8 +1,7 @@
 import { ErrorPage } from './ErrorPage';
 import { InputValueDisplay } from './InputValueDisplay';
-import { KeyboardOptions } from './KeyboardOptions';
-import { MatchWordTips } from './MatchWordTips';
 import { MatchWords } from './MatchWords';
+import { MatchWordTips } from './MatchWordTips';
 import { OperationArea } from './OperationArea';
 import { Popup } from './Popup';
 
@@ -13,5 +12,4 @@ export {
   MatchWordTips,
   ErrorPage,
   Popup,
-  KeyboardOptions,
 };
