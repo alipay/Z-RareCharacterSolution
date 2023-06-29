@@ -1,6 +1,7 @@
 export enum InputTypes {
   stroke = 'stroke', // 笔画输入
   pinyin = 'pinyin', // 拼音输入
+  split = 'split', // 拆字输入
   handwriting = 'handwriting', // 手写输入
 }
 
@@ -26,8 +27,8 @@ export interface IWordsItem {
 export type IWordsData = IWordsItem[];
 
 export interface ICommonError {
-  detail: Error; // 错误详情
-  errorCode: string; // 错误码
-  message: string; // 错误文案
-  onRetry?: () => Promise<void>; // 重试的错误方法
+  detail?: Error; // 错误详情
+  errorCode?: string; // 错误码
+  message?: string; // 错误文案
+  onRetry?: () => Promise<any>; // 重试的错误方法
 }

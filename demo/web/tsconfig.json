@@ -13,7 +13,8 @@
       "@/*": ["./*"],
       "@@/*": ["src/.umi/*"]
     },
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "types": ["node"]
   },
   "exclude": [
     "node_modules",

@@ -1,13 +1,18 @@
-import React, { Fragment, useEffect, useRef, useState } from 'react';
-import { ErrorPage, InputValueDisplay, MatchWords, Popup } from './components';
+import { getWordsData, matchWordsRecommend } from '../../../utils/src/index';
+import React, { useEffect, useRef, useState } from 'react';
+import {
+  ErrorPage,
+  InputValueDisplay,
+  KeyboardOptions,
+  MatchWords,
+  Popup,
+} from './components';
 import AppContext from './context';
 import useInputValue from './hooks/InputValue';
-import PinYinKeybord from './keyboard/pinyin';
-import StrokeKeybord from './keyboard/stroke';
-import { ICommonError, InputTypes, IWordsData } from './typings';
-import { getWordsData, matchWordsRecommend } from '../../../utils/src/index';
-import { mergeProps } from './utils';
 import './index.less';
+import { PinYinKeyboard, SplitKeyboard, StrokeKeyboard } from './keyboard';
+import { ICommonError, IWordsData, InputTypes } from './typings';
+import { mergeProps } from './utils';
 
 export interface IProps {
   /**
@@ -70,6 +75,12 @@ export interface IProps {
   onReady?: (fontUrl: string, fontFace: object) => void;
 }
 
+enum IPageState {
+  NORMAL = 'NORMAL', // 正常键盘界面
+  ERROR = 'ERROR', // 出现错误
+  SWITCH_KEYBOARD = 'SWITCH_KEYBOARD', // 切换键盘类型
+}
+
 const defaultProps = {
   visible: false,
   type: 'pinyin',
@@ -84,7 +95,7 @@ const defaultProps = {
   onReady: () => {},
 };
 
-const RareWordsInput = React.forwardRef<HTMLDivElement, IProps>((p: IProps) => {
+const RareWordsInput = React.forwardRef<HTMLDivElement, IProps>((p, ref) => {
   const props = mergeProps(defaultProps, p);
   const { visible, type, onClose, onShow, destroyOnClose, forceRender } = props;
 
@@ -94,20 +105,23 @@ const RareWordsInput = React.forwardRef<HTMLDivElement, IProps>((p: IProps) => {
     value: inputValue,
     displayStr,
     addChar,
+    addMutiChar,
     removeChar,
     removeAll,
   } = useInputValue();
+  const [pageState, setPageState] = useState<IPageState>(IPageState.NORMAL);
+  const [keyboardType, setKeyboardType] = useState<InputTypes>(
+    InputTypes[props.type as InputTypes] || InputTypes.pinyin,
+  );
   const [wordsData, setWordsData] = useState<IWordsData>([]);
   const [matchWords, setMatchWords] = useState<IWordsData>([]);
-  const [errorInfo, setErrorInfo] = useState<ICommonError | null>(null);
+  const [errorInfo, setErrorInfo] = useState<ICommonError>();
   const hasFetchData = useRef(false);
 
   /**
-   * 关闭键盘
+   * 清空输入值和候选字列表
    */
-  const handleClose = () => {
-    // 关闭键盘
-    setShowKeyboard(false);
+  const handleClearInputValue = () => {
     // 清空候选项
     setMatchWords([]);
     // 清空输入值
@@ -115,8 +129,16 @@ const RareWordsInput = React.forwardRef<HTMLDivElement, IProps>((p: IProps) => {
   };
 
   /**
+   * 关闭键盘
+   */
+  const handleClose = () => {
+    setShowKeyboard(false);
+    handleClearInputValue();
+  };
+
+  /**
    * 处理输入完成
-   * @param value 输入值
+   * @param {string} value 输入值
    */
   const handleFinish = (word: string) => {
     handleClose();
@@ -124,8 +146,18 @@ const RareWordsInput = React.forwardRef<HTMLDivElement, IProps>((p: IProps) => {
   };
 
   /**
+   * 切换键盘类型
+   * @param {InputTypes} type 键盘类型
+   */
+  const handleChangeKeyboardType = (type: InputTypes) => {
+    setKeyboardType(type);
+    setPageState(IPageState.NORMAL);
+  };
+
+  /**
    * 设置候选字区域字体
    * 强制将字体设置为生僻字字体，避免外界样式影响了展示
+   * @param {FontFace} fontFace 字体对象s
    */
   const setMatchWordsFont = (fontFace: FontFace) => {
     try {
@@ -149,8 +181,8 @@ const RareWordsInput = React.forwardRef<HTMLDivElement, IProps>((p: IProps) => {
    */
   const fetchWordsData = () => {
     return getWordsData().then((res) => {
+      console.log('[调试代码] ~ file: index.tsx:184 ~ returngetWordsData ~ res:', res);
       const { data = [], fontFace, fontUrl } = res;
-      setErrorInfo(null);
       setWordsData(data);
       hasFetchData.current = true;
       setMatchWordsFont(fontFace);
@@ -166,6 +198,7 @@ const RareWordsInput = React.forwardRef<HTMLDivElement, IProps>((p: IProps) => {
     if (!showKeyboard || hasFetchData.current) return;
     fetchWordsData().catch((err: ICommonError) => {
       if (props.onError) props.onError(err);
+      setPageState(IPageState.ERROR);
       setErrorInfo(err);
     });
   }, [showKeyboard]);
@@ -180,12 +213,13 @@ const RareWordsInput = React.forwardRef<HTMLDivElement, IProps>((p: IProps) => {
     inputValue,
     displayStr,
     addChar,
+    addMutiChar,
     removeChar,
     removeAll,
     showKeyboard,
     setShowKeyboard,
+    keyboardType,
   };
-  const showErrorPage = !!errorInfo?.errorCode; // 是否展示错误页
 
   return (
     <Popup
@@ -203,10 +237,7 @@ const RareWordsInput = React.forwardRef<HTMLDivElement, IProps>((p: IProps) => {
         setShowKeyboard(false);
       }}
     >
-      <div
-        className="rare-words-input__keybord"
-        onMouseDown={(e) => e.preventDefault()}
-      >
+      <div ref={ref} className="rare-words-input__keybord">
         <div className="rare-words-input__header">
           {/* 输入值展示区 */}
           {!typeIsHandWriting && <InputValueDisplay value={inputValue} />}
@@ -216,30 +247,38 @@ const RareWordsInput = React.forwardRef<HTMLDivElement, IProps>((p: IProps) => {
               value={matchWords}
               onClick={handleFinish}
               onClose={handleClose}
+              onSwitch={() => {
+                setPageState(IPageState.SWITCH_KEYBOARD);
+                handleClearInputValue();
+              }}
             />
           </AppContext.Provider>
         </div>
         {/* 操作区域 */}
         <div className="rare-words-input__main">
+          {/* 键盘界面 */}
+          {pageState === IPageState.NORMAL && (
+            <>
+              <AppContext.Provider value={context}>
+                {/* 笔画输入键盘 */}
+                {keyboardType === InputTypes.stroke && <StrokeKeyboard />}
+                {/* 拼音输入键盘 */}
+                {keyboardType === InputTypes.pinyin && <PinYinKeyboard />}
+                {/* 拆字输入键盘 */}
+                {keyboardType === InputTypes.split && <SplitKeyboard />}
+              </AppContext.Provider>
+            </>
+          )}
           {/* 错误反馈 */}
-          {showErrorPage && (
+          {pageState === IPageState.ERROR && (
             <ErrorPage {...errorInfo} onRetry={fetchWordsData} />
           )}
-          {!showErrorPage && (
-            <Fragment>
-              {/* 笔画输入键盘 */}
-              {type === InputTypes.stroke && (
-                <AppContext.Provider value={context}>
-                  <StrokeKeybord />
-                </AppContext.Provider>
-              )}
-              {/* 拼音输入键盘 */}
-              {type === InputTypes.pinyin && (
-                <AppContext.Provider value={context}>
-                  <PinYinKeybord />
-                </AppContext.Provider>
-              )}
-            </Fragment>
+          {/* 键盘切换界面 */}
+          {pageState === IPageState.SWITCH_KEYBOARD && (
+            <KeyboardOptions
+              defaultValue={keyboardType}
+              onChange={handleChangeKeyboardType}
+            />
           )}
         </div>
         <div className="rare-words-input__footer" />

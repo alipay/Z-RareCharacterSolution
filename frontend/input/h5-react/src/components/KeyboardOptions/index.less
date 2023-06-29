@@ -1,0 +1,49 @@
+.rare-words-input__keyboard-options {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  height: calc(336 * var(--px, 1px));
+}
+
+.rare-words-input__keyboard-option {
+  width: 25%;
+  text-align: center;
+  color: var(--text-sub-color);
+
+  &.checked {
+    color: var(--active-color);
+
+    .rare-words-input__keyboard-option-icon {
+      .iconfont::after {
+        content: '\e656';
+        position: absolute;
+        font-size: calc(24 * var(--px, 1px));
+        bottom: calc(-10 * var(--px, 1px));
+        left: calc(-10 * var(--px, 1px));
+        font-family: iconfont !important;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    }
+  }
+
+  .iconfont {
+    position: relative;
+    font-size: calc(60 * var(--px, 1px));
+  }
+
+  .icon-roundcheckfill {
+    position: absolute;
+    font-size: calc(24 * var(--px, 1px));
+    bottom: calc(-12 * var(--px, 1px));
+    left: calc(-12 * var(--px, 1px));
+  }
+
+  p {
+    font-size: calc(30 * var(--px, 1px));
+    margin: 0;
+    margin-top: calc(20 * var(--px, 1px));
+  }
+}

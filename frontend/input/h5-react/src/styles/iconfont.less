@@ -1,11 +1,8 @@
 @font-face {
   font-family: iconfont;
-  src: url('https://mdn.alipayobjects.com/huamei_2fq7mt/afts/file/A*5oDLTavjP1YAAAAAAAAAAAAADh58AQ/keybord-iconfont.woff2')
-      format('woff2'),
-    url('https://mdn.alipayobjects.com/huamei_2fq7mt/afts/file/A*y8swTalZo84AAAAAAAAAAAAADh58AQ/keybord-iconfont.woff')
-      format('woff'),
-    url('https://mdn.alipayobjects.com/huamei_2fq7mt/afts/file/A*Z7WrQ54LmhIAAAAAAAAAAAAADh58AQ/keybord-iconfont.ttf')
-      format('truetype');
+  src: url('//at.alicdn.com/t/a/font_3595411_cotj13v1ico.woff2?t=1686882426086') format('woff2'),
+    url('//at.alicdn.com/t/a/font_3595411_cotj13v1ico.woff?t=1686882426086') format('woff'),
+    url('//at.alicdn.com/t/a/font_3595411_cotj13v1ico.ttf?t=1686882426086') format('truetype');
 }
 
 .iconfont {
@@ -16,28 +13,44 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-delete::before {
-  content: '\e704';
+.icon-roundcheckfill::before {
+  content: '\e656';
 }
 
-.icon-arrow-down::before {
-  content: '\e665';
+.icon-keyboard-switch::before {
+  content: '\e604';
 }
 
-.icon-shouqijianpan::before {
-  content: '\e62d';
+.icon-bihua::before {
+  content: '\e602';
+}
+
+.icon-pinyin::before {
+  content: '\e603';
+}
+
+.icon-chaizi::before {
+  content: '\e601';
 }
 
 .icon-keyboard-hide::before {
   content: '\e811';
 }
 
+.icon-arrow-up::before {
+  content: '\e803';
+}
+
+.icon-arrow-down::before {
+  content: '\e665';
+}
+
 .icon-arrow-right::before {
   content: '\e802';
 }
 
-.icon-arrow-up::before {
-  content: '\e803';
+.icon-delete::before {
+  content: '\e704';
 }
 
 .icon-mode::before {
@@ -77,6 +90,11 @@
 }
 
 .icon-keyboard-hide {
+  font-size: calc(48 * var(--px, 1px)) !important;
+  color: #666;
+}
+
+.icon-keyboard-switch {
   font-size: calc(48 * var(--px, 1px)) !important;
   color: #666;
 }
