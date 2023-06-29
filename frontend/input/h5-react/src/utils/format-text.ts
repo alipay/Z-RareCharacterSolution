@@ -24,7 +24,7 @@ function formatWithArray(text: string, values: string[]) {
  * @param values 变量对象
  * @returns {string}
  */
-function formatWithObject(text: string, values: object) {
+function formatWithObject(text: string, values: Record<string, any>) {
   return text.replace(Object_INDEX_RE, function (orignal, matched) {
     const value = values[matched];
     if (value) {

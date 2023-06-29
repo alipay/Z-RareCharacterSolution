@@ -5,11 +5,12 @@ export default function useInputValue(): {
   value: string[];
   displayStr: string;
   addChar: (char: string) => void;
+  addMutiChar: (char: string) => void;
   removeChar: () => void;
   removeAll: () => void;
 } {
   const [value, setValue] = useState<string[]>([]);
-  const displayStr = isArray(value) ? value.join('') : value;
+  const displayStr = isArray(value) ? value.join('') : (value as string);
 
   /**
    * 添加一项
@@ -17,6 +18,15 @@ export default function useInputValue(): {
    */
   const addChar = (char: string) => {
     setValue([...value, char]);
+  };
+
+  /**
+   * 添加多项
+   * @param char
+   */
+  const addMutiChar = (char: string) => {
+    const charArr = char.split('');
+    setValue([...value, ...charArr]);
   };
 
   /**
@@ -35,5 +45,5 @@ export default function useInputValue(): {
     setValue([]);
   };
 
-  return { value, displayStr, addChar, removeChar, removeAll };
+  return { value, displayStr, addChar, addMutiChar, removeChar, removeAll };
 }
