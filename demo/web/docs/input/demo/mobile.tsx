@@ -4,7 +4,7 @@ import { FontLoader } from '../../../../../frontend/utils';
 import './mobile.less';
 
 export default () => {
-  const [logs, setLogs] = React.useState([]);
+  const [logs, setLogs] = React.useState<{msg: string, time: number}[]>([]);
   const [value, setValue] = React.useState('');
   const [visible, setvisible] = React.useState(false);
   const startTime = Date.now();
