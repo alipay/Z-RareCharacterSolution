@@ -5,7 +5,7 @@ import AppContext from '../../context';
 import { IPinYinMapItem } from '../../typings';
 import './index.less';
 
-const PinYinKeybord: React.FC = () => {
+const PinYinKeyboard: React.FC = () => {
   const { addChar, removeChar } = React.useContext(AppContext);
   /**
    * 处理字母点击事件
@@ -65,4 +65,4 @@ const PinYinKeybord: React.FC = () => {
   );
 };
 
-export default PinYinKeybord;
+export default PinYinKeyboard;

@@ -1386,7 +1386,7 @@ export default function useInputValue(): {
 import { ErrorPage, InputValueDisplay, MatchWords, Popup } from './components';
 import AppContext from './context';
 import useInputValue from './hooks/InputValue';
-import PinYinKeybord from './keyboard/pinyin';
+import PinYinKeyboard from './keyboard/pinyin';
 import StrokeKeybord from './keyboard/stroke';
 import { ICommonError, InputTypes, IWordsData } from './typings';
 import { getWordsData, matchWordsRecommend } from '../../../utils/src/index';
@@ -1620,7 +1620,7 @@ const RareWordsInput = React.forwardRef<HTMLDivElement, IProps>((p: IProps) => {
               {/* \u62FC\u97F3\u8F93\u5165\u952E\u76D8 */}
               {type === InputTypes.pinyin && (
                 <AppContext.Provider value={context}>
-                  <PinYinKeybord />
+                  <PinYinKeyboard />
                 </AppContext.Provider>
               )}
             </Fragment>
@@ -1698,7 +1698,7 @@ import AppContext from '../../context';
 import { IPinYinMapItem } from '../../typings';
 import './index.less';
 
-const PinYinKeybord: React.FC = () => {
+const PinYinKeyboard: React.FC = () => {
   const { addChar, removeChar } = React.useContext(AppContext);
   /**
    * \u5904\u7406\u5B57\u6BCD\u70B9\u51FB\u4E8B\u4EF6
@@ -1758,7 +1758,7 @@ const PinYinKeybord: React.FC = () => {
   );
 };
 
-export default PinYinKeybord;
+export default PinYinKeyboard;
 `},29632:function(u,l){"use strict";l.Z=`.rare-words-input__stroke {
   display: flex;
   flex-flow: row nowrap;
