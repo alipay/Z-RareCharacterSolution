@@ -4,7 +4,7 @@ import { BTN_TEXT, STROKE_MAP } from '../../contants';
 import AppContext from '../../context';
 import './index.less';
 
-const StrokeKeybord: React.FC = () => {
+const StrokeKeyboard: React.FC = () => {
   const { addChar } = React.useContext(AppContext);
   /**
    * 处理字母点击事件
@@ -67,4 +67,4 @@ const StrokeKeybord: React.FC = () => {
   );
 };
 
-export default StrokeKeybord;
+export default StrokeKeyboard;

@@ -2,8 +2,8 @@ import React, { Fragment, useEffect, useRef, useState } from 'react';
 import { ErrorPage, InputValueDisplay, MatchWords, Popup } from './components';
 import AppContext from './context';
 import useInputValue from './hooks/InputValue';
-import PinYinKeybord from './keyboard/pinyin';
-import StrokeKeybord from './keyboard/stroke';
+import PinYinKeyboard from './keyboard/pinyin';
+import StrokeKeyboard from './keyboard/stroke';
 import { ICommonError, InputTypes, IWordsData } from './typings';
 import { getWordsData, matchWordsRecommend } from '../../../utils/src/index';
 import { mergeProps } from './utils';
@@ -230,13 +230,13 @@ const RareWordsInput = React.forwardRef<HTMLDivElement, IProps>((p: IProps) => {
               {/* 笔画输入键盘 */}
               {type === InputTypes.stroke && (
                 <AppContext.Provider value={context}>
-                  <StrokeKeybord />
+                  <StrokeKeyboard />
                 </AppContext.Provider>
               )}
               {/* 拼音输入键盘 */}
               {type === InputTypes.pinyin && (
                 <AppContext.Provider value={context}>
-                  <PinYinKeybord />
+                  <PinYinKeyboard />
                 </AppContext.Provider>
               )}
             </Fragment>
