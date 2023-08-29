@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkrare_words_demo=self.webpackChunkrare_words_demo||[]).push([[448],{85061:function(v,r,e){e.r(r),e.d(r,{default:function(){return d}});var a=e(53721),o=e(71062),t=function(){var m=(0,a.UO)(),s=m.id,u=(0,a.WF)(),c=u.demos,f=c[s]||{},n=f.component;return n&&(0,o.createElement)(n)},d=t}}]);

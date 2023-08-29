@@ -21,7 +21,10 @@ const StrokeKeyboard: React.FC = () => {
         {STROKE_MAP.map(({ label, value, extraClassName }) => (
           <div
             key={value}
-            className={cls('rare-words-input__stroke-key', extraClassName)}
+            className={cls(
+              'rare-words-input__stroke-key',
+              extraClassName,
+            )}
             data-value={value}
             onClick={handleClick}
           >
@@ -64,4 +67,4 @@ const StrokeKeyboard: React.FC = () => {
   );
 };
 
-export { StrokeKeyboard };
+export default StrokeKeyboard;

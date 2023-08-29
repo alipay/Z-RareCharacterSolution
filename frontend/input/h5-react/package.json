@@ -1,6 +1,6 @@
 {
   "name": "ant-rare-words-input-react",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "description": "生僻字输入组件 React 版",
   "license": "MIT",
   "module": "dist/index.js",
@@ -52,7 +52,6 @@
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
-    "@types/lodash": "^4.14.195",
     "@types/react": "^18.2.13",
     "@umijs/lint": "^4.0.0",
     "dumi": "^2.0.2",
@@ -70,5 +69,6 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "repository": "https://github.com/alipay/Z-RareCharacterSolution.git"
 }

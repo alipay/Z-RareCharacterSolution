@@ -26,7 +26,10 @@ const PinYinKeyboard: React.FC = () => {
     return (
       <div
         key={value}
-        className={cls('rare-words-input__pinyin-key', extraClassName)}
+        className={cls(
+          'rare-words-input__pinyin-key',
+          extraClassName,
+        )}
         data-value={value}
         onClick={handleClick}
       >
@@ -62,4 +65,4 @@ const PinYinKeyboard: React.FC = () => {
   );
 };
 
-export { PinYinKeyboard };
+export default PinYinKeyboard;

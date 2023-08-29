@@ -9,12 +9,12 @@ import RareWordsInput from '../../../../../../frontend/input/pc-react/src/index'
 import './index.less';
 
 export default () => {
-  const [logs, setLogs] = React.useState([]);
+  const [logs, setLogs] = React.useState<{msg: string, time: number}[]>([]);
   const [name, setName] = React.useState('');
   const [loading, setLoading] = React.useState(false);
   const [inputError, setInputError] = React.useState(false);
   const [showSuccess, setShowSuccess] = React.useState(false);
-  const [result, setResult] = React.useState([]);
+  const [result, setResult] = React.useState<any>([]);
   const [showError, setShowError] = React.useState(false);
   const [errorMsg, setErrorMsg] = React.useState('');
   let startTime = Date.now();

@@ -1,7 +1,7 @@
 /**
  * 默认字体下载地址
  */
-export const DEFAULT_FONT_URL = 'https://mdn.alipayobjects.com/huamei_2fq7mt/afts/file/A*N-FpRpJEmZgAAAAAAAAAAAAADh58AQ/RareWordsFonts-v1.0.12.ttf';
+export const DEFAULT_FONT_URL = 'https://mdn.alipayobjects.com/huamei_2fq7mt/afts/file/A*hHI6SahdSqMAAAAAAAAAAAAADh58AQ/RareWordsFonts-v1.0.13.ttf';
 
 /**
  * 字库缓存key值

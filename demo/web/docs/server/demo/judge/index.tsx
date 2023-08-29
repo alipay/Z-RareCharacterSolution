@@ -7,7 +7,7 @@ import { KeyBoardIcon } from '../../../../components/icons';
 import './index.less';
 
 export default () => {
-  const [logs, setLogs] = React.useState([]);
+  const [logs, setLogs] = React.useState<{msg: string, time: number}[]>([]);
   const [name, setName] = React.useState('');
   const [loading, setLoading] = React.useState(false);
   const [inputError, setInputError] = React.useState(false);

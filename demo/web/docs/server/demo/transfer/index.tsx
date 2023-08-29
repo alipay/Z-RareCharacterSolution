@@ -17,7 +17,7 @@ import RareWordsInput from '../../../../../../frontend/input/pc-react/src/index'
 import './index.less';
 
 export default () => {
-  const [logs, setLogs] = React.useState([]);
+  const [logs, setLogs] = React.useState<{msg: string, time: number}[]>([]);
   const [name, setName] = React.useState('');
   const [transType, setTransType] = React.useState('unicodeAndPua');
   const [codeType, setCodeType] = React.useState('');

@@ -1,6 +1,6 @@
 {
   "name": "ant-rare-words-input-react-pc",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "description": "生僻字输入键盘电脑版",
   "license": "MIT",
   "module": "dist/index.js",
@@ -65,5 +65,6 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "repository": "https://github.com/alipay/Z-RareCharacterSolution.git"
 }
