@@ -15312,5 +15312,21 @@ export const ZDATAS = {
       splitChars: [{ char: '扌条' }],
       weight: 10,
     },
+    {
+      charId: '802cdf67',
+      unicodeChar: '𫰠',
+      unicodeCodePoint: '2BC20',
+      pinYinChars: [{ char: 'DANG1' }],
+      splitChars: [{ char: '女当' }],
+      weight: 10,
+    },
+    {
+      charId: '25be47d5',
+      unicodeChar: '𱖎',
+      unicodeCodePoint: '3158E',
+      pinYinChars: [{ char: 'AO4' }],
+      splitChars: [{ char: '土夭' }],
+      weight: 10,
+    },
   ],
 };
