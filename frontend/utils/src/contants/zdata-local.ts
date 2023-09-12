@@ -1,7 +1,7 @@
 export const ZDATAS = {
   version: '1.0.5',
   fontUrl:
-    'https://mdn.alipayobjects.com/huamei_2fq7mt/afts/file/A*hHI6SahdSqMAAAAAAAAAAAAADh58AQ/RareWordsFonts-v1.0.13.ttf',
+    'https://mdn.alipayobjects.com/huamei_seif62/afts/file/A*63IqSLzYAdEAAAAAAAAAAAAADh18AQ/RareWordsFonts-v1.0.14.ttf',
   datas: [
     {
       charId: 'd88cab',
