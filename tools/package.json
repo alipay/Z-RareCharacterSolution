@@ -1,0 +1,23 @@
+{
+  "name": "z-data-tools",
+  "version": "1.0.0",
+  "description": "蚂蚁Z字库生僻字解决方案工具",
+  "main": "index.js",
+  "scripts": {
+    "generate-char-id": "node generateCharId.js",
+    "generate-font": "node splitAlibabaSubFontAndMergeZData.js",
+    "merge-font": "node mergeFont.js",
+    "generate-sql": "node generateSql.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": "https://github.com/alipay/Z-RareCharacterSolution.git",
+  "devDependencies": {
+    "ant-font-carrier": "^0.0.2",
+    "crypto": "^1.0.1",
+    "date-fns": "^2.30.0",
+    "he": "^1.2.0",
+    "ts-node": "^10.9.1",
+    "uuid": "^9.0.0"
+  }
+}
