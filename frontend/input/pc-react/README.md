@@ -102,7 +102,7 @@ const Page = () => {
 
 > 如果 unpkg.com 被墙了，可以替换成 npm.elemecdn.com 的国内镜像，使用地址 https://npm.elemecdn.com/ant-rare-words-input-react-pc/dist/ant-rare-words-input-react-pc.min.js
 >
-> 如果不希望跟随版本更新，可以限制引入 cdn 时的版本，使用地址 https://npm.elemecdn.com/ant-rare-words-input-react-pc@0.0.1/dist/ant-rare-words-input-react-pc.min.js
+> 如果不希望跟随版本更新，可以限制引入 cdn 时的版本，使用地址 https://unpkg.com/ant-rare-words-input-react-pc@0.0.1/dist/ant-rare-words-input-react-pc.min.js
 
 ## 开发
 
