@@ -92,7 +92,7 @@ cd tools && npm run merge-font
 ```
 
 > !!! 如果自己添补了新的汉字，需要在生成新的字体后将字体上传到cdn，并在使用的时候替换掉官方的字体cdn地址。
-> `https://mdn.alipayobjects.com/huamei_seif62/afts/file/A*63IqSLzYAdEAAAAAAAAAAAAADh18AQ/RareWordsFonts-v1.0.14.ttf` 的地址是蚂蚁Z字库的官方字体CDN地址，定期更新，不包含您自己添加的新增的汉字的字体。
+> `https://mdn.alipayobjects.com/huamei_2fq7mt/afts/file/A*wBbQRYCq_p4AAAAAAAAAAAAADh58AQ/RareWordsFonts.ttf` 的地址是蚂蚁Z字库的官方字体CDN地址，定期更新，不包含您自己添加的新增的汉字的字体。
 
 ## 后端数据库SQL文件
 
