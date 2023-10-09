@@ -152,7 +152,7 @@ newAddedWords.forEach((word, index) => {
   newSQLDataArr.push('');
 });
 
-console.log(`新增字符的SQL：\n` + newSQLDataArr.join('\n'))
+console.log(`新增${newAddedWords.length}个字符的SQL：\n` + newSQLDataArr.join('\n'))
 
 fs.appendFileSync(SQL_FILE_PATH, '\n' + newSQLDataArr.join('\n'));
 

@@ -1,6 +1,6 @@
 {
   "name": "ant-rare-words-input-react",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "生僻字输入组件 React 版",
   "license": "MIT",
   "module": "dist/index.js",
