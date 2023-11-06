@@ -149,6 +149,11 @@ docker-compose up
 
 ![联系我们](https://mdn.alipayobjects.com/huamei_2fq7mt/afts/img/A*g8GRQZsMwYYAAAAAAAAAAAAADh58AQ/original)
 
+如果字库缺乏你需要的汉字，也可以打开支付宝扫下方二维码选择生僻字征集提交生僻字给我们：
+
+![生僻字征集](https://mdn.alipayobjects.com/huamei_2fq7mt/afts/img/A*XAHuSpggZ40AAAAAAAAAAAAADh58AQ/original)
+
+
 ## 七、感谢
 + Z字库生僻字解决方案使用的字体是由阿里巴巴普惠体提供的，感谢阿里巴巴普惠体对此项目的大力支持。
 
