@@ -83,6 +83,7 @@ frontend
 |   |    |  |     ├─InputValueDisplay  已输入字符区域组件
 |   |    |  |     ├─ErrorPage    错误页组件
 |   |    ├─docs                  文档以及demo
+|   ├─ h5-svelte 输入组件vue或者jquery版本
 |   ├─apmini  输入组件支付宝小程序版本
 |   |   └README.md
 ```
