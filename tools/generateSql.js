@@ -104,7 +104,7 @@ function generateTRADITIONALInsert(word) {
 /**
  * 解析zdata数据
  * @param {string} filePath zdata数据文件地址
- * @returns 
+ * @returns
  */
 function readAndParseJson(filePath) {
   // 读取文件内容

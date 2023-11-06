@@ -83,6 +83,7 @@ frontend
 |   |    |  |     ├─InputValueDisplay  已输入字符区域组件
 |   |    |  |     ├─ErrorPage    错误页组件
 |   |    ├─docs                  文档以及demo
+|   ├─ h5-svelte 输入组件vue或者jquery版本
 |   ├─apmini  输入组件支付宝小程序版本
 |   |   └README.md
 ```
@@ -148,6 +149,10 @@ docker-compose up
 您可以通过提交[issues](https://github.com/alipay/Z-RareCharacterSolution/issues)、扫描下方二维码加入生僻字交流群
 
 ![联系我们](https://mdn.alipayobjects.com/huamei_2fq7mt/afts/img/A*g8GRQZsMwYYAAAAAAAAAAAAADh58AQ/original)
+
+如果字库缺乏你需要的汉字，也可以打开支付宝扫下方二维码选择生僻字征集提交生僻字给我们：
+
+![生僻字征集](https://mdn.alipayobjects.com/huamei_2fq7mt/afts/img/A*XAHuSpggZ40AAAAAAAAAAAAADh58AQ/original)
 
 ## 七、感谢
 + Z字库生僻字解决方案使用的字体是由阿里巴巴普惠体提供的，感谢阿里巴巴普惠体对此项目的大力支持。
