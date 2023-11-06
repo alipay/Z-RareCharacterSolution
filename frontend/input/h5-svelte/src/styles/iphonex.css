@@ -1,0 +1,50 @@
+@media only screen and (device-width: 375px) and (device-height: 812px) and (device-pixel-ratio: 3) {
+  .rare-words-input__main {
+    padding-bottom: constant(
+      safe-area-inset-bottom,
+      calc(34 * var(--px, 1px))
+    );
+    padding-bottom: env(safe-area-inset-bottom, calc(34 * var(--px, 1px)));
+  }
+}
+
+@media only screen and (device-width: 414px) and (device-height: 896px) and (device-pixel-ratio: 3) {
+  .rare-words-input__main {
+    padding-bottom: constant(
+      safe-area-inset-bottom,
+      calc(34 * var(--px, 1px))
+    );
+    padding-bottom: env(safe-area-inset-bottom, calc(34 * var(--px, 1px)));
+  }
+}
+
+@media only screen and (device-width: 414px) and (device-height: 896px) and (device-pixel-ratio: 2) {
+  .rare-words-input__main {
+    padding-bottom: constant(
+      safe-area-inset-bottom,
+      calc(34 * var(--px, 1px))
+    );
+    padding-bottom: env(safe-area-inset-bottom, calc(34 * var(--px, 1px)));
+  }
+}
+
+@media only screen and (device-width: 428px) and (device-height: 926px) and (device-pixel-ratio: 3) {
+  .rare-words-input__main {
+    padding-bottom: constant(
+      safe-area-inset-bottom,
+      calc(34 * var(--px, 1px))
+    );
+    padding-bottom: env(safe-area-inset-bottom, calc(34 * var(--px, 1px)));
+  }
+}
+
+@supports (bottom: constant(safe-area-inset-bottom)) or
+  (bottom: env(safe-area-inset-bottom)) {
+  .rare-words-input__main {
+    padding-bottom: constant(
+      safe-area-inset-bottom,
+      calc(34 * var(--px, 1px))
+    );
+    padding-bottom: env(safe-area-inset-bottom, calc(34 * var(--px, 1px)));
+  }
+}
