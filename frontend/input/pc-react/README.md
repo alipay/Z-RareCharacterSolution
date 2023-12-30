@@ -83,7 +83,7 @@ const Page = () => {
     <script src="https://cdn.bootcdn.net/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js" crossorigin></script>
     <style>
       :root {
-        --px: 0.5px !important; // 设置组件px单位
+        --px: 0.5px !important;
       }
     </style>
   </head>
