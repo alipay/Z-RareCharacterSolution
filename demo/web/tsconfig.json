@@ -10,8 +10,12 @@
     "baseUrl": "./",
     "strict": true,
     "paths": {
-      "@/*": ["./*"],
-      "@@/*": ["src/.umi/*"]
+      "@/*": [
+        "./*"
+      ],
+      "@@/*": [
+        "src/.umi/*"
+      ]
     },
     "allowSyntheticDefaultImports": true
   },
@@ -26,5 +30,11 @@
     "docs",
     "tests"
   ],
-  "include": [".dumi/**/*", ".dumirc.ts", "src/**/*", "types", "utils", "service"]
+  "include": [
+    ".dumirc.ts",
+    "src/**/*",
+    "types",
+    "utils",
+    "service"
+  ]
 }
