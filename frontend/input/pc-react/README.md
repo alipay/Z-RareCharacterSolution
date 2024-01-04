@@ -89,7 +89,7 @@ const Page = () => {
   </head>
   <body>
     <div id="app"></div>
-    <script src="https://unpkg.com/ant-rare-words-input-react-pc@0.0.1/dist/ant-rare-words-input-react-pc.min.js" crossorigin></script>
+    <script src="https://unpkg.com/ant-rare-words-input-react-pc/dist/ant-rare-words-input-react-pc.min.js" crossorigin></script>
     <script>
       const domNode = document.getElementById('app');
       const root = ReactDOM.createRoot(domNode);

@@ -108,4 +108,4 @@ newFont.setFontface({
   ascent: 812,
   descent: -212,
 });
-newFont.output({ path: rareWordsFilePath, types: ['ttf'] });
+newFont.output({ path: rareWordsFilePath, types: ['ttf', 'woff'] });
