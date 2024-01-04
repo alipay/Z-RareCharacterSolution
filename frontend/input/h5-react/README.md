@@ -86,19 +86,13 @@ const Page = () => {
 ！！！这里注意的是此键盘组件基于 React 运行的，并且没有内置 React 库，如果你的系统也没有引入 React 相关的 script，请记得在此之前先引入：
 
 ```html
-<script
-  src="https://cdn.bootcdn.net/ajax/libs/react/18.2.0/umd/react.production.min.js"
-  crossorigin
-></script>
-<script
-  src="https://cdn.bootcdn.net/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"
-  crossorigin
-></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/react/18.2.0/umd/react.production.min.js" crossorigin></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js" crossorigin></script>
 ```
 
 示例代码：
 
-```xml
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -109,7 +103,7 @@ const Page = () => {
     <script src="https://cdn.bootcdn.net/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js" crossorigin></script>
     <style>
       :root {
-        --px: 0.5px !important; // 组件px单位
+        --px: 0.5px !important;
       }
     </style>
   </head>
@@ -126,8 +120,6 @@ const Page = () => {
 </html>
 ```
 
-> 如果 unpkg.com 被墙了，可以替换成 npm.elemecdn.com 的国内镜像，使用地址 https://npm.elemecdn.com/ant-rare-words-input-react/dist/ant-rare-words-input-react.min.js
->
 > 如果不希望跟随版本更新，可以限制引入 cdn 时的版本，使用地址 https://unpkg.com/ant-rare-words-input-react@0.0.1/dist/ant-rare-words-input-react.min.js
 
 ## 开发

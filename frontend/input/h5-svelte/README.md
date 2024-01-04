@@ -148,7 +148,10 @@ export default {
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/react/18.2.0/umd/react.production.min.js" crossorigin></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/ant-rare-words-svelte@0.0.1/dist/index.umd.js" crossorigin></script>
+    <link rel="stylesheet" href="https://unpkg.com/ant-rare-words-svelte@0.0.1/dist/index.css">
   </head>
   <body>
     <div class="content">
@@ -159,8 +162,8 @@ export default {
       const inputBtnEle = document.getElementById('open-input-btn');
       const inputEle = document.getElementById('input');
       inputBtnEle.addEventListener('click', function () {
-        const { Input } = window.RareWordsSvelte;
-        const input = new Input({
+        const { RareWordsInput } = window.RareWordsSvelte;
+        const input = new RareWordsInput({
           target: document.body,
           props: {
             visible: true,
@@ -184,9 +187,6 @@ export default {
   </body>
 </html>
 ```
-
-> 如果 unpkg.com 被墙了，可以替换成 npm.elemecdn.com 的国内镜像，使用地址 https://npm.elemecdn.com/ant-rare-words-svelte/dist/index.umd.js
->
 > 如果不希望跟随版本更新，可以限制引入 cdn 时的版本，使用地址 https://unpkg.com/ant-rare-words-svelte@0.0.1/dist/ant-rare-words-svelte.min.js
 
 ## 开发
